@@ -18,6 +18,12 @@
 			<TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
 				<TabItem Header="Install" Visibility="Collapsed" Name="Tab1">
 					<Grid Background="#222222">
+						<Grid Background="#222222">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+						</Grid.ColumnDefinitions>
 						<StackPanel Background="#777777" SnapsToDevicePixels="True" Grid.Column="0" Margin="10">
 							<Label Content="Browsers" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installbrave" Content="Brave" Margin="5,0"/>
