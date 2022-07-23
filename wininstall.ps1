@@ -171,9 +171,9 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("Microsoft.WindowsTerminal")
         $WPFInstallterminal.IsChecked = $false
     }
-    If ( $WPFInstalldirectx.IsChecked -eq $false ) { 
+    If ( $WPFInstalldirectx.IsChecked -eq $true ) { 
         $wingetinstall.Add("Microsoft.DirectX")
-        $WPFInstalldirectx.IsChecked = $true
+        $WPFInstalldirectx.IsChecked = $false
     }
     If ( $WPFInstallttaskbar.IsChecked -eq $true ) { 
         $wingetinstall.Add("TranslucentTB.TranslucentTB")
