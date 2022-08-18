@@ -198,7 +198,7 @@ $WPFinstall.Add_Click({
         $WPFInstallputty.IsChecked = $false
     }
     If ( $WPFInstallanydesk.IsChecked -eq $true) { 
-        $wingetinstall.Add("AnyDesk")
+        $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
         $WPFInstallanydesk.IsChecked = $false
     }
     If ( $WPFInstallbitwarden.IsChecked -eq $true ) { 
@@ -368,7 +368,7 @@ $WPFinstall.Add_Click({
     $wingetResult = New-Object System.Collections.Generic.List[System.Object]
     foreach ( $node in $wingetinstall )
     {
-        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e --accept-source-agreements --accept-package-agreements --force $node | Out-Host" -Wait -WindowStyle Normal
+        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e  --force --accept-source-agreements --accept-package-agreements --silent $node | Out-Host" -Wait -WindowStyle Minimized
         $wingetResult.Add("$node`n")
     }
     $wingetResult.ToArray()
@@ -383,7 +383,7 @@ $WPFinstall.Add_Click({
 })
 
 $WPFInstallUpgrade.Add_Click({
-    Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget upgrade --all  | Out-Host" -Wait -WindowStyle Normal
+    Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget upgrade --all  | Out-Host" -Wait -WindowStyle Minimized
     $ButtonType = [System.Windows.MessageBoxButton]::OK
     $MessageboxTitle = "ACTUALIZANDO TODOS LOS PROGRAMAS"
     $Messageboxbody = ("COMPLETADO")
