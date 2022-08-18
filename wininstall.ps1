@@ -198,7 +198,7 @@ $WPFinstall.Add_Click({
         $WPFInstallputty.IsChecked = $false
     }
     If ( $WPFInstallanydesk.IsChecked -eq $true) { 
-        $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
+        $wingetinstall.Add("AnyDesk")
         $WPFInstallanydesk.IsChecked = $false
     }
     If ( $WPFInstallbitwarden.IsChecked -eq $true ) { 
