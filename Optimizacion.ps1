@@ -912,7 +912,4 @@ Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a
 Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 ipconfig /flushdns
 
-Write-Host "Instalando Anydesk"
-Winget install AnyDeskSoftwareGmbH.AnyDesk --force --accept-source-agreements --accept-package-agreements --silent | cmd
-
 Write-Host "Proceso completado..."
