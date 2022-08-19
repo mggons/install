@@ -24,9 +24,6 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 	Write-Host "Installing the Microsoft.MicrosoftSolitaireCollection_4.11.12160.0"
 	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.MicrosoftSolitaireCollection_4.11.12160.0.appxbundle
-	
-	Write-Host "Installing Anydesk"
-	Winget install -e AnyDeskSoftwareGmbH.AnyDesk --force --accept-source-agreements --accept-package-agreements --silent
 
 Function Mostrar-MensajeCuadroDialogo {
 Param
@@ -914,5 +911,8 @@ set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.
 Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 ipconfig /flushdns
+
+Write-Host "Instalando Anydesk"
+Winget install AnyDeskSoftwareGmbH.AnyDesk --force --accept-source-agreements --accept-package-agreements --silent | cmd
 
 Write-Host "Proceso completado..."
