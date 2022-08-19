@@ -24,6 +24,9 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 	Write-Host "Installing the Microsoft.MicrosoftSolitaireCollection_4.11.12160.0"
 	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.MicrosoftSolitaireCollection_4.11.12160.0.appxbundle
+	
+	Write-Host "Installing Anydesk"
+	Winget install -e AnyDeskSoftwareGmbH.AnyDesk --force --accept-source-agreements --accept-package-agreements --silent
 
 Function Mostrar-MensajeCuadroDialogo {
 Param
