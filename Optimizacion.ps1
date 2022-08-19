@@ -324,7 +324,8 @@ Write-Host "Deshabilitando Cortana"
     $ResultText.text = "`r`n" +"`r`n" + "Disabled Cortana"
 
 Write-Host "Habilitación del modo oscuro"
-    Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
+    New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force
+    Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0 -Type Dword -Force
     Write-Host "Enabled Dark Mode"
     $ResultText.text = "`r`n" +"`r`n" + "Enabled Dark Mode"
 	
@@ -450,10 +451,10 @@ Write-Host "Icono de personas ocultas..."
 
 Write-Host "Ocultar iconos de la bandeja..."
     Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "EnableAutoTray" -Type DWord -Value 1
-    Write-Host "Enabling NumLock after startup..."
-    If (!(Test-Path "HKU:")) {
-        New-PSDrive -Name HKU -PSProvider Registry -Root HKEY_USERS | Out-Null
-    }
+#Write-Host "Enabling NumLock after startup..."
+#    If (!(Test-Path "HKU:")) {
+#        New-PSDrive -Name HKU -PSProvider Registry -Root HKEY_USERS | Out-Null
+#    }
 #    Set-ItemProperty -Path "HKU:\.DEFAULT\Control Panel\Keyboard" -Name "InitialKeyboardIndicators" -Type DWord -Value 2147483650
 #    Add-Type -AssemblyName System.Windows.Forms
 #    If (!([System.Windows.Forms.Control]::IsKeyLocked('NumLock'))) {
