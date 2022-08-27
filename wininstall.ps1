@@ -261,10 +261,14 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("KeePassXCTeam.KeePassXC")
         $WPFInstallkeepass.IsChecked = $false
     }              
-    If ( $WPFInstalllibrewolf.IsChecked -eq $true ) { 
+    If ( $WPFInstalllibreoffice.IsChecked -eq $true ) { 
         $wingetinstall.Add("TheDocumentFundation.LibreOffice")
-        $WPFInstalllibrewolf.IsChecked = $false
-    }            
+        $WPFInstalllibreoffice.IsChecked = $false
+    }           
+    If ( $WPFInstallMicrosoftOffice.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.Office")
+        $WPFInstallMicrosoftOffice.IsChecked = $false
+    } 
     If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
         $wingetinstall.Add("Malwarebytes.Malwarebytes")
         $WPFInstallmalwarebytes.IsChecked = $false
