@@ -107,9 +107,9 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("DuongDieuPhap.ImageGlass")
         $WPFInstallimageglass.IsChecked = $false
     }
-    If ( $WPFInstalljava8.IsChecked -eq $true ) { 
-        $wingetinstall.Add("AdoptOpenJDK.OpenJDK.8")
-        $WPFInstalljava8.IsChecked = $false
+    If ( $WPFInstalljava8SE.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Oracle.JavaRuntimeEnvironment")
+        $WPFInstalljava8SE.IsChecked = $false
     }
     If ( $WPFInstalljava16.IsChecked -eq $true ) { 
         $wingetinstall.Add("AdoptOpenJDK.OpenJDK.16")
