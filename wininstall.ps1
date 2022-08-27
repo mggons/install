@@ -262,7 +262,7 @@ $WPFinstall.Add_Click({
         $WPFInstallkeepass.IsChecked = $false
     }              
     If ( $WPFInstalllibrewolf.IsChecked -eq $true ) { 
-        $wingetinstall.Add("LibreWolf.LibreWolf")
+        $wingetinstall.Add("TheDocumentFundation.LibreOffice")
         $WPFInstalllibrewolf.IsChecked = $false
     }            
     If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
