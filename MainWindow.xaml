@@ -25,7 +25,7 @@
 							<Label Content="Exploradores" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installbrave" Content="Brave" Margin="5,0"/>
 							<CheckBox Name="Installchrome" Content="Google Chrome" Margin="5,0"/>
-							<CheckBox Name="Installfirefox" Content="Firefox" Margin="5,0"/>
+							<CheckBox Name="Installfirefox" Content="Mozilla Firefox" Margin="5,0"/>
 							<CheckBox Name="Installvivaldi" Content="Vivaldi" Margin="5,0"/>
 							
 							<Label Content="Comunicacion" FontSize="16" Margin="5,0"/>
