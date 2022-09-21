@@ -57,7 +57,7 @@
 							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
 							<CheckBox Name="Installobsidian" Content="Obsidian" Margin="5,0"/>
 							<CheckBox Name="Installterminal" Content="Windows Terminal" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X" Margin="5,0"/>
+							<CheckBox Name="Installdirectx" Content="Direct X Ultima Version" Margin="5,0"/>
 							
 						</StackPanel>
 						<StackPanel Background="#777777" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
