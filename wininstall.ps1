@@ -374,7 +374,7 @@ $WPFinstall.Add_Click({
     $wingetResult.ToArray()
     $wingetResult | % { $_ } | Out-Host
     # Popup after finished
-    $ButtonType = [System.Windows.MessageBoxButton]::Cancel
+    $ButtonType = [System.Windows.MessageBoxButton]::YesNoCancel
     $MessageboxTitle = "Programas Instalados correctamente"
     $Messageboxbody = ($wingetResult)
     $MessageIcon = [System.Windows.MessageBoxImage]::Information
