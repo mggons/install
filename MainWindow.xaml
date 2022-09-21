@@ -57,7 +57,7 @@
 							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
 							<CheckBox Name="Installobsidian" Content="Obsidian" Margin="5,0"/>
 							<CheckBox Name="Installterminal" Content="Windows Terminal" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X 10-11-12" Margin="5,0"/>
+							<CheckBox Name="Installdirectx" Content="Direct X" Margin="5,0"/>
 							
 						</StackPanel>
 						<StackPanel Background="#777777" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
@@ -122,7 +122,6 @@
 							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
 							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
-
 						</StackPanel>
 					</Grid>
 				</TabItem>				
