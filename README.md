@@ -1,4 +1,4 @@
-# Para usar el instalador de Windows 10/11 mediante Winget
+# Para usar el instalador de Windows 10/11 mediante Windows Packet Manager (WINGET)
 
 
 para usar los programas puedes iniciar un cmd en modo administrador 
