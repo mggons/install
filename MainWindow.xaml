@@ -25,8 +25,8 @@
 							<Label Content="Exploradores" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installbrave" Content="Brave" Margin="5,0"/>
 							<CheckBox Name="Installchrome" Content="Google Chrome" Margin="5,0"/>
-							<CheckBox Name="Installchromium" Content="Un-Googled Chromium" Margin="5,0"/>
 							<CheckBox Name="Installfirefox" Content="Firefox" Margin="5,0"/>
+							<CheckBox Name="Installvivaldi" Content="Vivaldi" Margin="5,0"/>
 							<CheckBox Name="Installvivaldi" Content="Vivaldi" Margin="5,0"/>
 
 							<Label Content="Comunicacion" FontSize="16" Margin="5,0"/>
@@ -53,27 +53,29 @@
 							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
 							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
 							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
+							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>
 							
-							<Label Content="Paquetes" FontSize="16" Margin="5,0"/>
+							<Label Content="Add-ons" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
+							<CheckBox Name="Installobsidian" Content="Obsidian" Margin="5,0"/>
+							<CheckBox Name="Installterminal" Content="Windows Terminal" Margin="5,0"/>
+							<CheckBox Name="Installdirectx" Content="Direct X 10-11-12" Margin="5,0"/>
 							
 						</StackPanel>
 						<StackPanel Background="#777777" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
 
-							<Label Content="Documentos" FontSize="16" Margin="5,0"/>
+							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
-							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office" Margin="5,0"/>
+							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365" Margin="5,0"/>
 							<CheckBox Name="Installlibreoffice" Content="LibreOffice" Margin="5,0"/>
-							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>
-							<CheckBox Name="Installobsidian" Content="Obsidian" Margin="5,0"/>
-							<CheckBox Name="Installsumatra" Content="Sumatra PDF" Margin="5,0"/>
+							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
 
 							<Label Content="Juegos" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installepicgames" Content="Epic Games Launcher" Margin="5,0"/>
 							<CheckBox Name="Installgog" Content="GOG Galaxy" Margin="5,0"/>
 							<CheckBox Name="Installsteam" Content="Steam" Margin="5,0"/>
 
-							<Label Content="Herramientas" FontSize="16" Margin="5,0"/>
+							<Label Content="Redes" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
 							<CheckBox Name="Installmremoteng" Content="mRemoteNG" Margin="5,0"/>
 							<CheckBox Name="Installputty" Content="Putty" Margin="5,0"/>
@@ -119,8 +121,7 @@
 							<CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0"/>
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							<CheckBox Name="Installwindirstat" Content="WinDirStat" Margin="5,0"/>
-							<CheckBox Name="Installterminal" Content="Windows Terminal" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X" Margin="5,0"/>
+							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
 							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
 
