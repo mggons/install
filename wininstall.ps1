@@ -368,13 +368,13 @@ $WPFinstall.Add_Click({
     $wingetResult = New-Object System.Collections.Generic.List[System.Object]
     foreach ( $node in $wingetinstall )
     {
-        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e --accept-source-agreements --accept-package-agreements --silent $node | Out-Host" -Wait -WindowStyle Minimized
+        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e --accept-source-agreements --accept-package-agreements --silent $node | Out-Host" -Wait -WindowStyle Maximized
         $wingetResult.Add("$node`n")
     }
     $wingetResult.ToArray()
     $wingetResult | % { $_ } | Out-Host
     # Popup after finished
-    $ButtonType = [System.Windows.MessageBoxButton]::YesNoCancel
+    $ButtonType = [System.Windows.MessageBoxButton]::OK
     $MessageboxTitle = "Programas Instalados correctamente"
     $Messageboxbody = ($wingetResult)
     $MessageIcon = [System.Windows.MessageBoxImage]::Information
@@ -383,7 +383,7 @@ $WPFinstall.Add_Click({
 })
 
 $WPFInstallUpgrade.Add_Click({
-    Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget upgrade --all  | Out-Host" -Wait -WindowStyle Minimized
+    Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget upgrade --all  | Out-Host" -Wait -WindowStyle Maximized
     $ButtonType = [System.Windows.MessageBoxButton]::OK
     $MessageboxTitle = "ACTUALIZANDO TODOS LOS PROGRAMAS"
     $Messageboxbody = ("COMPLETADO")
