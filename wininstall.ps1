@@ -163,9 +163,9 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("SublimeHQ.SublimeText.4")
         $WPFInstallsublime.IsChecked = $false
     }
-    If ( $WPFInstallsumatra.IsChecked -eq $true ) { 
-        $wingetinstall.Add("SumatraPDF.SumatraPDF")
-        $WPFInstallsumatra.IsChecked = $false
+    If ( $WPFInstallwpsoffice.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Kingsoft.WPSOffice")
+        $WPFInstallwpsoffice.IsChecked = $false
     }
     If ( $WPFInstallterminal.IsChecked -eq $true ) { 
         $wingetinstall.Add("Microsoft.WindowsTerminal")
