@@ -38,7 +38,7 @@
 							<CheckBox Name="Installteams" Content="Microsoft Teams" Margin="5,0"/>
 							<CheckBox Name="Installzoom" Content="Zoom Video Conference" Margin="5,0"/>
 							
-							<Label Content="Desarrollo / Programacion" FontSize="16" Margin="5,0"/>
+							<Label Content="Desarrollo/Programacion" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installatom" Content="Atom" Margin="5,0"/>
 							<CheckBox Name="Installgithubdesktop" Content="GitHub Desktop" Margin="5,0"/>
 							<CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0"/>
@@ -117,7 +117,7 @@
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							<CheckBox Name="Installwindirstat" Content="WinDirStat" Margin="5,0"/>
 							
-							<Label Content="Diseno / Audio" FontSize="16" Margin="5,0"/>
+							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
 							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
 							
