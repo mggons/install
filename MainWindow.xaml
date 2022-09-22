@@ -89,35 +89,15 @@
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
 
-							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
-							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365 Enterprise" Margin="5,0"/>
-							<CheckBox Name="Installlibreoffice" Content="LibreOffice" Margin="5,0"/>
-							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
-
-							<Label Content="Juegos Online" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installepicgames" Content="Epic Games Launcher" Margin="5,0"/>
-							<CheckBox Name="Installgog" Content="GOG Galaxy" Margin="5,0"/>
-							<CheckBox Name="Installsteam" Content="Steam" Margin="5,0"/>
-
+							<Label Content="Antivirus" FontSize="16" Margin="5,0"/>
+													
+							<Label Content="PDF" FontSize="16" Margin="5,0"/>
+							
 							<Label Content="Redes" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installadvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
-							<CheckBox Name="Installmremoteng" Content="mRemoteNG" Margin="5,0"/>
-							<CheckBox Name="Installputty" Content="Putty" Margin="5,0"/>
-							<CheckBox Name="Installscp" Content="WinSCP" Margin="5,0"/>
-							<CheckBox Name="Installwireshark" Content="WireShark" Margin="5,0"/>
+							
 
 							<Label Content="Multimedia" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installeartrumpet" Content="Eartrumpet (Audio)" Margin="5,0"/>
-							<CheckBox Name="Installfoobar" Content="Foobar2000 (Music Player)" Margin="5,0"/>
-							<CheckBox Name="Installhandbrake" Content="HandBrake" Margin="5,0"/>
-							<CheckBox Name="Installimageglass" Content="ImageGlass (Image Viewer)" Margin="5,0"/>
-							<CheckBox Name="Installmpc" Content="Media Player Classic (Video Player)" Margin="5,0"/>
-							<CheckBox Name="Installobs" Content="OBS Studio" Margin="5,0"/>
-							<CheckBox Name="Installsharex" Content="ShareX (Screenshots)" Margin="5,0"/>
-							<CheckBox Name="Installspotify" Content="Spotify" Margin="5,0"/>
-							<CheckBox Name="Installvlc" Content="VLC (Video Player)" Margin="5,0"/>
-							<CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0"/>
+							
 
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
