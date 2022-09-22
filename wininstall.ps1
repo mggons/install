@@ -50,6 +50,28 @@ get-variable WPF*
 #===========================================================================
 $WPFinstall.Add_Click({
     $wingetinstall = New-Object System.Collections.Generic.List[System.Object]
+    If ( $WPFInstallmsvc++.IsChecked -eq $true ) {
+    	$wingetinstall.Add(Microsoft.VCRedist.2005.x64)
+	$wingetinstall.Add(Microsoft.VCRedist.2005.x86)
+	$wingetinstall.Add(Microsoft.VCRedist.2008.x64)
+	$wingetinstall.Add(Microsoft.VC++2008Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2008Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2010Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2010Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2012Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2012Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2013Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2013Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2015Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2015Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2017Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2017Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2015-2019Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2015-2019Redist-x64)
+	$wingetinstall.Add(Microsoft.VC++2015-2022Redist-x86)
+	$wingetinstall.Add(Microsoft.VC++2015-2022Redist-x64)
+        $WPFInstallmsvc++.IsChecked = $false
+    }
     If ( $WPFInstalladobe.IsChecked -eq $true ) { 
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
         $WPFInstalladobe.IsChecked = $false
