@@ -99,11 +99,17 @@
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
 							<CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0"/>
 							
-							<Label Content="Redes" FontSize="16" Margin="5,0"/>
+							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
+							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
+							<CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0"/>
+							<CheckBox Name="Installinkscape" Content="Inkscape" Margin="5,0"/>
 							
-
-							<Label Content="Multimedia" FontSize="16" Margin="5,0"/>
-							
+							<Label Content="Add-ons Esenciales" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installterminal" Content="Windows Terminal update" Margin="5,0"/>
+							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
+							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
+							<CheckBox Name="Installmsvc" Content="Visual Redistributable" Margin="5,0"/>														
 
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
@@ -121,17 +127,10 @@
 							<CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0"/>
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							
-							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
-							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
-							<CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0"/>
-							<CheckBox Name="Installinkscape" Content="Inkscape" Margin="5,0"/>
+							<Label Content="Other1" FontSize="16" Margin="5,0"/>
 							
-							<Label Content="Add-ons Esenciales" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installterminal" Content="Windows Terminal update" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
-							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
-							<CheckBox Name="Installmsvc" Content="Visual Redistributable" Margin="5,0"/>
+
+							<Label Content="Other2" FontSize="16" Margin="5,0"/>
 							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
 							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
