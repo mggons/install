@@ -1,5 +1,5 @@
 Add-Type -AssemblyName System.Windows.Forms
-[System.Windows.Forms.Application]::EnableVisualStyles() -WindowStyle Maximized
+[System.Windows.Forms.Application]::EnableVisualStyles() 
 
 $ErrorActionPreference = 'SilentlyContinue'
 $wshell = New-Object -ComObject Wscript.Shell
@@ -14,9 +14,9 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 # $inputXML = Get-Content "MainWindow.xaml" #uncomment for development
 $inputXML = (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/mggons/install/main/MainWindow.xaml") #uncomment for Production
 
-$inputXML = $inputXML -replace 'mc:Ignorable="d"','' -replace "x:N",'N' -replace '^<Win.*', '<Window'
-[void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
-[xml]$XAML = $inputXML
+# $inputXML = $inputXML -replace 'mc:Ignorable="d"','' -replace "x:N",'N' -replace '^<Win.*', '<Window'
+# [void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
+# [xml]$XAML = $inputXML
 #Read XAML
  
 $reader=(New-Object System.Xml.XmlNodeReader $xaml) 
