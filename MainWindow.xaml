@@ -57,13 +57,13 @@
 
 							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365 Enterprise" Margin="5,0"/>
-							<CheckBox Name="Installlibreoffice" Content="LibreOffice" Margin="5,0"/>
+							<CheckBox Name="Installlibreoffice" Content="Libre Office" Margin="5,0"/>
 							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
 
 							<Label Content="Juegos Online" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installepicgames" Content="Epic Games Launcher" Margin="5,0"/>
-							<CheckBox Name="Installgog" Content="GOG Galaxy" Margin="5,0"/>
-							<CheckBox Name="Installsteam" Content="Steam" Margin="5,0"/>
+							<CheckBox Name="Installgog" Content="GOG Galaxy Launcher" Margin="5,0"/>
+							<CheckBox Name="Installsteam" Content="Steam Launcher" Margin="5,0"/>
 
 							<Label Content="Redes" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadvancedip" Content="Advanced IP Scanner" Margin="5,0"/>
@@ -89,7 +89,6 @@
 
 							<Label Content="Antivirus" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installavast" Content="Avast Antivirus Free" Margin="5,0"/>
-							<CheckBox Name="Installavg" Content="AVG Antivirus Free" Margin="5,0"/>
 							<CheckBox Name="InstallESA" Content="ESET Antivirus" Margin="5,0"/>
 							<CheckBox Name="InstallESS" Content="ESET Security" Margin="5,0"/>
 							
