@@ -11,7 +11,7 @@
 		<Grid Background="#777777" ShowGridLines="False" Name="MainGrid">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="2*"/>
-				<ColumnDefinition Width="6*"/>
+				<ColumnDefinition Width="4*"/>
 			</Grid.ColumnDefinitions>
 			<TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
 				<TabItem Header="Install" Visibility="Collapsed" Name="Tab1">
