@@ -57,7 +57,6 @@
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
 
 							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
 							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365 Enterprise" Margin="5,0"/>
 							<CheckBox Name="Installlibreoffice" Content="LibreOffice" Margin="5,0"/>
 							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
@@ -92,6 +91,7 @@
 							<Label Content="Antivirus" FontSize="16" Margin="5,0"/>
 													
 							<Label Content="PDF" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
 							
 							<Label Content="Redes" FontSize="16" Margin="5,0"/>
 							
