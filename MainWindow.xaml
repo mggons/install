@@ -51,8 +51,7 @@
 							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
 							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
 							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
-							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>
-							<CheckBox Name="Installobsidian" Content="Obsidian" Margin="5,0"/>							
+							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>							
 							
 						</StackPanel>
 						<StackPanel Background="#777777" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
@@ -77,9 +76,7 @@
 
 							<Label Content="Multimedia" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installeartrumpet" Content="Eartrumpet (Audio)" Margin="5,0"/>
-							<CheckBox Name="Installflameshot" Content="Flameshot (Screenshots)" Margin="5,0"/>
 							<CheckBox Name="Installfoobar" Content="Foobar2000 (Music Player)" Margin="5,0"/>
-							<CheckBox Name="Installgreenshot" Content="Greenshot (Screenshots)" Margin="5,0"/>
 							<CheckBox Name="Installhandbrake" Content="HandBrake" Margin="5,0"/>
 							<CheckBox Name="Installimageglass" Content="ImageGlass (Image Viewer)" Margin="5,0"/>
 							<CheckBox Name="Installmpc" Content="Media Player Classic (Video Player)" Margin="5,0"/>
@@ -94,7 +91,6 @@
 							
 							<Label Content="Utilidades" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installsevenzip" Content="7-Zip" Margin="5,0"/>
-							<CheckBox Name="Installbitwarden" Content="Bitwarden" Margin="5,0"/>
 							<CheckBox Name="Installcpuz" Content="CPU-Z" Margin="5,0"/>
 							<CheckBox Name="Installesearch" Content="Everything Search" Margin="5,0"/>
 							<CheckBox Name="Installgpuz" Content="GPU-Z" Margin="5,0"/>
