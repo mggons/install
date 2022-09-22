@@ -120,7 +120,6 @@
 							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
 							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
 							<CheckBox Name="Installmsvc++" Content="Visual Redistributable" Margin="5,0"/>
-							Installmsvc++
 							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
 							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
