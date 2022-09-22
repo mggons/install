@@ -50,7 +50,7 @@ get-variable WPF*
 #===========================================================================
 $WPFinstall.Add_Click({
     $wingetinstall = New-Object System.Collections.Generic.List[System.Object]
-    If ( $WPFInstallmsvc++.IsChecked -eq $true ) {
+    If ( $WPFInstallmsvc.IsChecked -eq $true ) {
 	$wingetinstall.Add("Microsoft.VCRedist.2005.x64")
 	$wingetinstall.Add("Microsoft.VCRedist.2005.x86")
 	$wingetinstall.Add("Microsoft.VCRedist.2008.x64")
@@ -70,7 +70,7 @@ $WPFinstall.Add_Click({
 	$wingetinstall.Add("Microsoft.VC++2015-2019Redist-x64")
 	$wingetinstall.Add("Microsoft.VC++2015-2022Redist-x86")
 	$wingetinstall.Add("Microsoft.VC++2015-2022Redist-x64")
-        $WPFInstallmsvc++.IsChecked = $false
+        $WPFInstallmsvc.IsChecked = $false
     }
     If ( $WPFInstalladobe.IsChecked -eq $true ) { 
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
