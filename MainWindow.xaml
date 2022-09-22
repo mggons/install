@@ -90,9 +90,14 @@
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
 
 							<Label Content="Antivirus" FontSize="16" Margin="5,0"/>
-													
+							<CheckBox Name="Installavast" Content="Avast Antivirus Free" Margin="5,0"/>
+							<CheckBox Name="Installavg" Content="AVG Antivirus Free" Margin="5,0"/>
+							<CheckBox Name="InstallESA" Content="ESET Antivirus" Margin="5,0"/>
+							<CheckBox Name="InstallESS" Content="ESET Security" Margin="5,0"/>
+							
 							<Label Content="PDF" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
+							<CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0"/>
 							
 							<Label Content="Redes" FontSize="16" Margin="5,0"/>
 							
