@@ -76,6 +76,26 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
         $WPFInstalladobe.IsChecked = $false
     }
+    If ( $WPFInstallpdf24.IsChecked -eq $true ) { 
+        $wingetinstall.Add("geeksoftwareGmbH.PDF24Creator")
+        $WPFInstallpdf24.IsChecked = $false
+    }
+    If ( $WPFInstallavast.IsChecked -eq $true ) { 
+        $wingetinstall.Add("XPDNZJFNCR1B07")
+        $WPFInstallavast.IsChecked = $false
+    }
+    If ( $WPFInstallavg.IsChecked -eq $true ) { 
+        $wingetinstall.Add("XP8BX2DWV7TF50")
+        $WPFInstallavg.IsChecked = $false
+    }
+    If ( $WPFInstallESS.IsChecked -eq $true ) { 
+        $wingetinstall.Add("ESET.Security")
+        $WPFInstallESS.IsChecked = $false
+    }
+    If ( $WPFInstallESA.IsChecked -eq $true ) { 
+        $wingetinstall.Add("ESET.Nod32")
+        $WPFInstallESA.IsChecked = $false
+    }
     If ( $WPFInstalladvancedip.IsChecked -eq $true ) { 
 	    $wingetinstall.Add("Famatech.AdvancedIPScanner")
         $WPFInstalladvancedip.IsChecked = $false
