@@ -39,20 +39,18 @@
 							<CheckBox Name="Installteams" Content="Microsoft Teams" Margin="5,0"/>
 							<CheckBox Name="Installzoom" Content="Zoom Video Conference" Margin="5,0"/>
 							
-							<Label Content="Programacion" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installatom" Content="Atom" Margin="5,0"/>
-							<CheckBox Name="Installgithubdesktop" Content="GitHub Desktop" Margin="5,0"/>
-							<CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0"/>
-							<CheckBox Name="Installjava18" Content="Oracle Java 18" Margin="5,0"/>
-							<CheckBox Name="Installjetbrains" Content="Jetbrains Toolbox" Margin="5,0"/>
-							<CheckBox Name="Installnodejs" Content="NodeJS" Margin="5,0"/>
-							<CheckBox Name="Installnodejslts" Content="NodeJS LTS" Margin="5,0"/>
-							<CheckBox Name="Installpython3" Content="Python3" Margin="5,0"/>
-							<CheckBox Name="Installsublime" Content="Sublime" Margin="5,0"/>
-							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
-							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
-							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
-							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>							
+							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
+							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
+							<CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0"/>
+							<CheckBox Name="Installinkscape" Content="Inkscape" Margin="5,0"/>
+							
+							<Label Content="Add-ons Esenciales" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installterminal" Content="Windows Terminal update" Margin="5,0"/>
+							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
+							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
+							<CheckBox Name="Installmsvc" Content="Visual Redistributable" Margin="5,0"/>
+													
 							
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
@@ -99,17 +97,20 @@
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
 							<CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0"/>
 							
-							<Label Content="Diseno/Audio" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installaudacity" Content="Audacity" Margin="5,0"/>
-							<CheckBox Name="Installblender" Content="Blender (3D Graphics)" Margin="5,0"/>
-							<CheckBox Name="Installgimp" Content="GIMP (Image Editor)" Margin="5,0"/>
-							<CheckBox Name="Installinkscape" Content="Inkscape" Margin="5,0"/>
-							
-							<Label Content="Add-ons Esenciales" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installterminal" Content="Windows Terminal update" Margin="5,0"/>
-							<CheckBox Name="Installdirectx" Content="Direct X Requerido" Margin="5,0"/>
-							<CheckBox Name="Installjava8SE" Content="Java 8 SE" Margin="5,0"/>
-							<CheckBox Name="Installmsvc" Content="Visual Redistributable" Margin="5,0"/>														
+							<Label Content="Programacion" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installatom" Content="Atom" Margin="5,0"/>
+							<CheckBox Name="Installgithubdesktop" Content="GitHub Desktop" Margin="5,0"/>
+							<CheckBox Name="Installjava16" Content="OpenJDK Java 16" Margin="5,0"/>
+							<CheckBox Name="Installjava18" Content="Oracle Java 18" Margin="5,0"/>
+							<CheckBox Name="Installjetbrains" Content="Jetbrains Toolbox" Margin="5,0"/>
+							<CheckBox Name="Installnodejs" Content="NodeJS" Margin="5,0"/>
+							<CheckBox Name="Installnodejslts" Content="NodeJS LTS" Margin="5,0"/>
+							<CheckBox Name="Installpython3" Content="Python3" Margin="5,0"/>
+							<CheckBox Name="Installsublime" Content="Sublime" Margin="5,0"/>
+							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
+							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
+							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
+							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>															
 
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
