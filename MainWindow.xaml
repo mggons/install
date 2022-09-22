@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:WinUtility"
         mc:Ignorable="d"
         Background="#777777"
-        Title="Utilidad de Instalacion de Programas en Windows 10/11" Height="550" Width="530">
+        Title="Utilidad de Instalacion de Programas en Windows 10/11" Height="530" Width="510">
 	<Viewbox>
 		<Grid Background="#777777" ShowGridLines="False" Name="MainGrid">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="3*"/>
-				<ColumnDefinition Width="7*"/>
+				<ColumnDefinition Width="2*"/>
+				<ColumnDefinition Width="6*"/>
 			</Grid.ColumnDefinitions>
 			<TabControl Grid.Column="1" Padding="-1" Name="TabNav" SelectedIndex="0">
 				<TabItem Header="Install" Visibility="Collapsed" Name="Tab1">
