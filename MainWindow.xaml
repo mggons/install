@@ -87,7 +87,7 @@
 							<CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0"/>
 
 						</StackPanel>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="1" Margin="10">
+						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
 
 							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
@@ -120,7 +120,7 @@
 							<CheckBox Name="Installvoicemeeter" Content="Voicemeeter (Audio)" Margin="5,0"/>
 
 						</StackPanel>
-						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="2" Margin="10">
+						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
 							
 							<Label Content="Utilidades" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installsevenzip" Content="7-Zip" Margin="5,0"/>
