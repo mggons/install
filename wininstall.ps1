@@ -15,8 +15,8 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 $inputXML = (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/mggons/install/main/MainWindow.xaml") #uncomment for Production
 
 # $inputXML = $inputXML -replace 'mc:Ignorable="d"','' -replace "x:N",'N' -replace '^<Win.*', '<Window'
-# [void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
-# [xml]$XAML = $inputXML
+[void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
+[xml]$XAML = $inputXML
 #Read XAML
  
 $reader=(New-Object System.Xml.XmlNodeReader $xaml) 
