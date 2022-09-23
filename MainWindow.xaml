@@ -109,7 +109,11 @@
 							<CheckBox Name="Installvisualstudio" Content="Visual Studio 2022 Community" Margin="5,0"/>
 							<CheckBox Name="Installvscode" Content="VS Code" Margin="5,0"/>
 							<CheckBox Name="Installvscodium" Content="VS Codium" Margin="5,0"/>
-							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>															
+							<CheckBox Name="Installnotepadplus" Content="Notepad++" Margin="5,0"/>
+							
+							<Label Content="Soporte Remoto" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
+							<CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0"/>
 
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
@@ -126,10 +130,6 @@
 							<CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0"/>
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							
-							<Label Content="Soporte Remoto" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
-							<CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0"/>
-
 							<Label Content="Other2" FontSize="16" Margin="5,0"/>
 							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
