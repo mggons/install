@@ -123,12 +123,12 @@
 							<CheckBox Name="Installmalwarebytes" Content="MalwareBytes" Margin="5,0"/>
 							<CheckBox Name="Installpowertoys" Content="Microsoft Powertoys" Margin="5,0"/>
 							<CheckBox Name="Installrufus" Content="Rufus Imager" Margin="5,0"/>
-							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
 							<CheckBox Name="Installttaskbar" Content="Translucent Taskbar" Margin="5,0"/>
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							
-							<Label Content="Other1" FontSize="16" Margin="5,0"/>
-							
+							<Label Content="Soporte Remoto" FontSize="16" Margin="5,0"/>
+							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
+							<CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0"/>
 
 							<Label Content="Other2" FontSize="16" Margin="5,0"/>
 							
