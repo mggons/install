@@ -97,7 +97,7 @@ $WPFinstall.Add_Click({
         $WPFInstallESA.IsChecked = $false
     }
     If ( $WPFInstalladvancedip.IsChecked -eq $true ) { 
-	    $wingetinstall.Add("Famatech.AdvancedIPScanner")
+	$wingetinstall.Add("Famatech.AdvancedIPScanner")
         $WPFInstalladvancedip.IsChecked = $false
     }
     If ( $WPFInstallatom.IsChecked -eq $true ) { 
@@ -397,6 +397,10 @@ $WPFinstall.Add_Click({
     }            
     If ( $WPFInstallzoom.IsChecked -eq $true ) { 
         $wingetinstall.Add("Zoom.Zoom")
+        $WPFInstallzoom.IsChecked = $false
+    }
+    If ( $WPFInstallzoom.IsChecked -eq $true ) { 
+        $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
         $WPFInstallzoom.IsChecked = $false
     }
     If ( $exit.IsChecked -eq $true ) { 
