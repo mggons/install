@@ -399,9 +399,9 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("Zoom.Zoom")
         $WPFInstallzoom.IsChecked = $false
     }
-    If ( $WPFInstallzoom.IsChecked -eq $true ) { 
+    If ( $WPFInstallanydesk.IsChecked -eq $true ) { 
         $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
-        $WPFInstallzoom.IsChecked = $false
+        $WPFInstallanydesk.IsChecked = $false
     }
     If ( $exit.IsChecked -eq $true ) { 
         ("exit")
