@@ -210,7 +210,7 @@ $Bloatware = @(
     # "Microsoft.XboxApp"
     "Microsoft.ConnectivityStore"
     "Microsoft.CommsPhone"
-    "Microsoft.ScreenSketch"
+    # "Microsoft.ScreenSketch"
     # "Microsoft.Xbox.TCUI"
     "Microsoft.XboxGameOverlay"
     # "Microsoft.XboxGameCallableUI"
