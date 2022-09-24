@@ -130,7 +130,7 @@
 							<CheckBox Name="Installtreesize" Content="TreeSize Free" Margin="5,0"/>
 							
 							<Label Content="Salir al finalizar" FontSize="16" Margin="5,0"/>
-							<CheckBox Name="Finalizar" Content="Salir" Margin="5,0"/>
+							<CheckBox Name="exit" Content="Salir" Margin="5,0"/>
 							
 							<Button Name="install" Background="AliceBlue" Content="Instalar Ahora" Margin="20,5,20,5" ToolTip="Instalar todos los programas seleccionados"/>
 							<Button Name="InstallUpgrade" Background="AliceBlue" Content="Actualizar" Margin="20,5,20,5" ToolTip="Actualizar todos los programas existentes en el sistema"/>
