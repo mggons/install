@@ -468,7 +468,7 @@ $WPFinstall.Add_Click({
     $wingetResult = New-Object System.Collections.Generic.List[System.Object]
     foreach ( $node in $wingetinstall )
     {
-        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e --accept-source-agreements --accept-package-agreements --silent $node | Out-Host" -Wait -WindowStyle Maximized
+        Start-Process powershell.exe -Verb RunAs -ArgumentList "-command winget install -e --accept-source-agreements --accept-package-agreements --force $node | Out-Host" -Wait -WindowStyle Maximized
         $wingetResult.Add("$node`n")
     }
     $wingetResult.ToArray()
