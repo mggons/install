@@ -226,10 +226,10 @@ $Bloatware = @(
     "Microsoft.Todos_8wekyb3d8bbwe"
     "Microsoft.Teams"
     "Microsoft.MicrosoftOfficeHub"
-	"Microsoft.549981C3F5F10"
-	"Microsoft.XboxGameCallableUI"
-	"Microsoft.XboxSpeechToTextOverlay"
-	"Microsoft.Xbox.TCUI"
+    "Microsoft.549981C3F5F10"
+    "Microsoft.XboxGameCallableUI"
+    "Microsoft.XboxSpeechToTextOverlay"
+    "Microsoft.Xbox.TCUI"
 
 
     #Sponsored Windows 10 AppX Apps
@@ -288,6 +288,10 @@ $Bloatware = @(
     $ResultText.text = "`r`n" +"`r`n" + "Finished Removing Bloatware Apps"
 	# SVCHost Tweak
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control" -Name "SvcHostSplitThresholdInKB" -Type DWord -Value 4194304
+
+winget uninstall Microsoft.teams
+winget uninstall Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe
+winget uninstall MicrosoftTeams_8wekyb3d8bbwe
 
 Write-Host "Ejecutar O&O Shutup con la configuración recomendada"
     $ResultText.text += "`r`n" +"Running O&O Shutup with Recommended Settings"
