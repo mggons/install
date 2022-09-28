@@ -561,33 +561,6 @@ Write-Host "Enable Sensor de Almacenamiento x30 dias"
 			}
 
 
-
-Write-Host "InstallVCRedistx64"
-function InstallVCRedistx64
-{
-	$DownloadsFolder = Get-ItemPropertyValue -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders" -Name "{374DE290-123F-4565-9164-39C4925E467B}"
-	$Parameters = @{
-		Uri             = "https://aka.ms/vs/17/release/VC_redist.x64.exe"
-		OutFile         = "$DownloadsFolder\VC_redist.x64.exe"
-		UseBasicParsing = $true
-		Verbose         = $true
-	}
-	Invoke-WebRequest @Parameters
-
-	Start-Process -FilePath "$DownloadsFolder\VC_redist.x64.exe" -ArgumentList "/install /passive /norestart" -Wait
-	<#
-		PowerShell 5.1 (7.2 too) interprets the 8.3 file name literally, if an environment variable contains a non-latin word,
-		so you won't be able to remove "$env:TEMP\dd_vcredist_amd64_*.log" file explicitly
-
-		Another ways to get normal path to %TEMP%
-		[Environment]::GetEnvironmentVariable("TEMP", "User")
-		(Get-ItemProperty -Path HKCU:\Environment -Name TEMP).TEMP
-		[System.IO.Path]::GetTempPath()
-	#>
-	Get-ChildItem -Path "$DownloadsFolder\VC_redist.x64.exe", "$env:TEMP\dd_vcredist_amd64_*.log" -Force | Remove-Item -Recurse -Force -ErrorAction Ignore
-}
-
-
 Write-Host "Quitar - Aplicaciones agregadas recientemente en el menú Inicio"
 			if (-not (Test-Path -Path HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer))
 			{
@@ -916,11 +889,11 @@ if ((Get-MpComputerStatus).AntivirusEnabled)
 Write-Host "Oculte el elemento Enviar a del menú contextual de carpetas"			
 New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo -Name "(default)" -PropertyType String -Value "-{7BA4C740-9E81-11CF-99D3-00AA004AE837}" -Force
 
-Write-Host "Agregando DNS de Adguard - ELiminar publicidad"
-set-DnsClientServerAddress -InterfaceAlias “Ethernet” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
-set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
-Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
-Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
+#Write-Host "Agregando DNS de Adguard - ELiminar publicidad"
+#set-DnsClientServerAddress -InterfaceAlias “Ethernet” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
+#set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
+#Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
+#Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 ipconfig /flushdns
 
 Write-Host "Proceso completado..."
