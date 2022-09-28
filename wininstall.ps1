@@ -126,6 +126,26 @@ $WPFinstall.Add_Click({
 	$wingetinstall.Add("Microsoft.VC++2015-2022Redist-x64")
         $WPFInstallmsvc.IsChecked = $false
     }
+    If ( $WPFInstalldirectx.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.DirectX")
+        $WPFInstalldirectx.IsChecked = $false
+    }
+    If ( $WPFInstallterminal.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.WindowsTerminal")
+        $WPFInstallterminal.IsChecked = $false
+    }
+    If ( $WPFInstallMicrosoftOffice.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.Office")
+        $WPFInstallMicrosoftOffice.IsChecked = $false
+    } 
+    If ( $WPFInstallpowertoys.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.PowerToys")
+        $WPFInstallpowertoys.IsChecked = $false
+    }
+    If ( $WPFInstallteams.IsChecked -eq $true ) { 
+        $wingetinstall.Add("Microsoft.Teams")
+        $WPFInstallteams.IsChecked = $false
+    } 
     If ( $WPFInstalladobe.IsChecked -eq $true ) { 
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
         $WPFInstalladobe.IsChecked = $false
@@ -235,10 +255,6 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("Notepad++.Notepad++")
         $WPFInstallnotepadplus.IsChecked = $false
     }
-    If ( $WPFInstallpowertoys.IsChecked -eq $true ) { 
-        $wingetinstall.Add("Microsoft.PowerToys")
-        $WPFInstallpowertoys.IsChecked = $false
-    }
     If ( $WPFInstallputty.IsChecked -eq $true ) { 
         $wingetinstall.Add("PuTTY.PuTTY")
         $WPFInstallputty.IsChecked = $false
@@ -262,14 +278,6 @@ $WPFinstall.Add_Click({
     If ( $WPFInstallwpsoffice.IsChecked -eq $true ) { 
         $wingetinstall.Add("Kingsoft.WPSOffice")
         $WPFInstallwpsoffice.IsChecked = $false
-    }
-    If ( $WPFInstallterminal.IsChecked -eq $true ) { 
-        $wingetinstall.Add("Microsoft.WindowsTerminal")
-        $WPFInstallterminal.IsChecked = $false
-    }
-    If ( $WPFInstalldirectx.IsChecked -eq $true ) { 
-        $wingetinstall.Add("Microsoft.DirectX")
-        $WPFInstalldirectx.IsChecked = $false
     }
     If ( $WPFInstallttaskbar.IsChecked -eq $true ) { 
         $wingetinstall.Add("TranslucentTB.TranslucentTB")
@@ -360,11 +368,7 @@ $WPFinstall.Add_Click({
     If ( $WPFInstalllibreoffice.IsChecked -eq $true ) { 
         $wingetinstall.Add("TheDocumentFundation.LibreOffice")
         $WPFInstalllibreoffice.IsChecked = $false
-    }           
-    If ( $WPFInstallMicrosoftOffice.IsChecked -eq $true ) { 
-        $wingetinstall.Add("Microsoft.Office")
-        $WPFInstallMicrosoftOffice.IsChecked = $false
-    } 
+    }
     If ( $WPFInstallmalwarebytes.IsChecked -eq $true ) { 
         $wingetinstall.Add("Malwarebytes.Malwarebytes")
         $WPFInstallmalwarebytes.IsChecked = $false
@@ -416,15 +420,7 @@ $WPFinstall.Add_Click({
     If ( $WPFInstallsteam.IsChecked -eq $true ) { 
         $wingetinstall.Add("Valve.Steam")
         $WPFInstallsteam.IsChecked = $false
-    }                             
-    If ( $WPFInstallteamviewer.IsChecked -eq $true ) { 
-        $wingetinstall.Add("TeamViewer.TeamViewer")
-        $WPFInstallteamviewer.IsChecked = $false
-    }
-     If ( $WPFInstallteams.IsChecked -eq $true ) { 
-        $wingetinstall.Add("Microsoft.Teams")
-        $WPFInstallteams.IsChecked = $false
-    }                        
+    }                                              
     If ( $WPFInstalltreesize.IsChecked -eq $true ) { 
         $wingetinstall.Add("JAMSoftware.TreeSize.Free")
         $WPFInstalltreesize.IsChecked = $false
@@ -456,6 +452,10 @@ $WPFinstall.Add_Click({
     If ( $WPFInstallanydesk.IsChecked -eq $true ) { 
         $wingetinstall.Add("AnyDeskSoftwareGmbH.AnyDesk")
         $WPFInstallanydesk.IsChecked = $false
+    }
+    If ( $WPFInstallteamviewer.IsChecked -eq $true ) { 
+        $wingetinstall.Add("TeamViewer.TeamViewer")
+        $WPFInstallteamviewer.IsChecked = $false
     }
     If ( $exit.IsChecked -eq $true ) { 
         ("exit")
