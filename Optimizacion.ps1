@@ -22,8 +22,8 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 	Write-Host "Installing the Microsoft.NET.Native.Framework.2.0"
 	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.NET.Native.Framework.2.0.appxbundle
 
-	Write-Host "Installing the Microsoft.MicrosoftSolitaireCollection_4.11.12160.0"
-	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.MicrosoftSolitaireCollection_4.11.12160.0.appxbundle
+	#Write-Host "Installing the Microsoft.MicrosoftSolitaireCollection_4.11.12160.0"
+	#Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.MicrosoftSolitaireCollection_4.11.12160.0.appxbundle
 
 Function Mostrar-MensajeCuadroDialogo {
 Param
