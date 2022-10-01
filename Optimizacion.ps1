@@ -56,9 +56,9 @@ Write-Host "Establezca el factor de calidad de los fondos de escritorio JPEG al 
 
 Write-Host "Borrar archivos temporales cuando las apps no se usen"
 	if ((Get-ItemPropertyValue -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy -Name 01) -eq "1")
-			{
-				New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy -Name 04 -PropertyType DWord -Value 1 -Force
-			}
+	{
+	New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy -Name 04 -PropertyType DWord -Value 1 -Force
+	}
 			
 
 Write-Host "Deshabilitar noticias e intereses"
@@ -73,7 +73,8 @@ Write-Host "Removiendo noticias e interés de la barra de tareas"
 				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force
 			}
 			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name EnableFeeds -PropertyType DWord -Value 0 -Force
-
+			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Dsh" -Name AllowNewAndInterests -PropertyType DWord -Value 0 -Force
+			
 Write-Host "Iconos en el area de notificacion"
 	New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer -Name EnableAutoTray -PropertyType DWord -Value 1 -Force
 	
