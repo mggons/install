@@ -71,11 +71,11 @@ Write-Host "Removiendo noticias e interés de la barra de tareas"
 	if (-not (Test-Path -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds"))
 			{
 				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force
-				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Dsh" -Force
+				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Force
 				
 			}
 			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name EnableFeeds -PropertyType DWord -Value 0 -Force
-			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Dsh" -Name AllowNewAndInterests -PropertyType DWord -Value 0 -Force
+			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Name AllowNewAndInterests -PropertyType DWord -Value 0 -Force
 			
 Write-Host "Iconos en el area de notificacion"
 	New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer -Name EnableAutoTray -PropertyType DWord -Value 1 -Force
