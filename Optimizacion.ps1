@@ -11,16 +11,16 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 }
 
 	Write-Host "Installing the Microsoft.WindowsStore"
-	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.WindowsStore.appxbundle
+	Add-AppxPackage -Path C:\Windows\OS_REC\appx\Microsoft.WindowsStore.appxbundle
 
 	Write-Host "Installing the Microsoft.VCLibs.14.00_x86"
-	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.VCLibs.14.00_x86.appxbundle
+	Add-AppxPackage -Path C:\Windows\OS_REC\appx\Microsoft.VCLibs.14.00_x86.appxbundle
 
 	Write-Host "Installing the Microsoft.NET.Native.Runtime.2.0"
-	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.NET.Native.Runtime.2.0.appxbundle
+	Add-AppxPackage -Path C:\Windows\OS_REC\appx\Microsoft.NET.Native.Runtime.2.0.appxbundle
 
 	Write-Host "Installing the Microsoft.NET.Native.Framework.2.0"
-	Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.NET.Native.Framework.2.0.appxbundle
+	Add-AppxPackage -Path C:\Windows\OS_REC\appx\Microsoft.NET.Native.Framework.2.0.appxbundle
 
 	#Write-Host "Installing the Microsoft.MicrosoftSolitaireCollection_4.11.12160.0"
 	#Add-AppxPackage -Path C:\Cambios\Postinstall\appx\Microsoft.MicrosoftSolitaireCollection_4.11.12160.0.appxbundle
