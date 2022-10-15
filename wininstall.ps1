@@ -9,6 +9,7 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 	Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs -WindowStyle Maximized
 	Exit
 }
+
 Write-Host "Ocultando Actualizacion KB5005463"
 Install-PackageProvider -Name Nuget -Force
 Install-Module PSWindowsUpdate -Force
