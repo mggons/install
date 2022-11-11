@@ -151,7 +151,11 @@ $WPFinstall.Add_Click({
     If ( $WPFInstallteams.IsChecked -eq $true ) { 
         $wingetinstall.Add("Microsoft.Teams")
         $WPFInstallteams.IsChecked = $false
-    } 
+    }
+    If ( $WPFInstallrustdesk.IsChecked -eq $true ) { 
+        $wingetinstall.Add("RustDesk.RustDesk")
+        $WPFInstallrustdesk.IsChecked = $false
+    }
     If ( $WPFInstalladobe.IsChecked -eq $true ) { 
         $wingetinstall.Add("Adobe.Acrobat.Reader.64-bit")
         $WPFInstalladobe.IsChecked = $false
