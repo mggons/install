@@ -109,7 +109,7 @@
 							<Label Content="Soporte Remoto" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installteamviewer" Content="TeamViewer" Margin="5,0"/>
 							<CheckBox Name="Installanydesk" Content="Anydesk" Margin="5,0"/>
-
+							<CheckBox Name="Installrustdesk" Content="RustDesk" Margin="5,0"/>
 						</StackPanel>
 						<StackPanel Background="#4a9264" SnapsToDevicePixels="True" Grid.Column="3" Margin="10">
 							
