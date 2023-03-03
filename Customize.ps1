@@ -25,6 +25,7 @@ Param
 Write-Host "------------------------------------"
 Write-Host "Optimizando Windows ... Espere."
 Write-Host "------------------------------------"
+"ping 127.0.0.1 -n 10 > nul" | cmd
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
