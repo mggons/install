@@ -49,13 +49,12 @@ Write-Host "Removiendo noticias e interés de la barra de tareas"
     Set-ItemProperty -Path  "HKCU:\Software\Microsoft\Windows\CurrentVersion\Feeds" -Name "ShellFeedsTaskbarViewMode" -Type DWord -Value 2
 	New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search -Name SearchboxTaskbarMode -PropertyType DWord -Value 0 -Force
 	if (-not (Test-Path -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds"))
-			{
-				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force
-				New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Force
-				
-			}
-			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name EnableFeeds -PropertyType DWord -Value 0 -Force
-			New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Name AllowNewAndInterests -PropertyType DWord -Value 0 -Force
+		{
+	New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Force
+	New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Force
+		}
+	New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" -Name EnableFeeds -PropertyType DWord -Value 0 -Force
+	New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Dsh" -Name AllowNewAndInterests -PropertyType DWord -Value 0 -Force
 			
 Write-Host "Iconos en el area de notificacion"
 	New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer -Name EnableAutoTray -PropertyType DWord -Value 1 -Force
@@ -597,5 +596,23 @@ set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.
 Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 ipconfig /flushdns
+
+Write-Host "Optimizando y limpiando Unidad y Windows"
+"dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase" | cmd
+"start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"
+"ping 127.0.0.1 -n 30 > nul" | cmd
+
+shutdown -r -t 45 -c "Cuando se reinicie, conectat a internet via WIFI o ETHERNET" | cmd
+
+"Reg Add HKLM\Software\Policies\Microsoft\MRT /v DontOfferThroughWUAU /t REG_DWORD /d 1 /f" | cmd
+"Net Stop msiserver /Y" | cmd
+"Reg Add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f" | cmd
+"RmDir /q /s %WINDIR%\Installer\$PatchCache$" | cmd
+"Net Start msiserver /Y" | cmd
+"Net Stop msiserver /Y" | cmd
+"Reg Add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 10 /f" | cmd
+"Net Start msiserver /Y" | cmd
+
+
 
 Write-Host "Proceso completado..."
