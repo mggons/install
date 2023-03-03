@@ -598,6 +598,7 @@ Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:
 ipconfig /flushdns
 
 Write-Host "Optimizando y limpiando Unidad y Windows"
+"dism.exe /Online /Set-ReservedStorageState /State:Disabled" | cmd
 "dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase" | cmd
 "start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"
 "ping 127.0.0.1 -n 30 > nul" | cmd
@@ -612,7 +613,5 @@ shutdown -r -t 45 -c "Cuando se reinicie, conectat a internet via WIFI o ETHERNE
 "Net Stop msiserver /Y" | cmd
 "Reg Add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 10 /f" | cmd
 "Net Start msiserver /Y" | cmd
-
-
 
 Write-Host "Proceso completado..."
