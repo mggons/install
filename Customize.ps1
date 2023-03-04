@@ -644,5 +644,7 @@ shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del rei
 
 Write-Host "Instalando Adguard" 
 start C:\ODT\Adguard.cmd | cmd
+"ping 127.0.0.1 -n 60 > nul" | cmd
+"RD C:\ODT" | cmd
 
 Write-Host "Proceso completado..."
