@@ -22,6 +22,13 @@ Param
 }
 
 
+    Import-Module BitsTransfer
+    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\Setup_Adguard.exe
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
+
 Write-Host "------------------------------------"
 Write-Host "Optimizando Windows ... Espere."
 Write-Host "------------------------------------"
@@ -29,10 +36,6 @@ Write-Host "------------------------------------"
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
-    Import-Module BitsTransfer
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
     
 Write-Host "Activando Tareas de Mantenimiento y AutoUpdate Adguard" 
 schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM | cmd
@@ -46,6 +49,20 @@ schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 "DEL /F C:\Optimize_RAM.xml" | cmd
 "DEL /F C:\Reset_Adguard.xml" | cmd
 
+
+#Write-Host "Instalando Adguard" 
+#Import-Module BitsTransfer
+    
+
+Write-Host "Instalando Adguard" 
+start C:\AutoSetup.exe | cmd
+ping 127.0.0.1 -n 20 > nul | cmd
+#taskkill /f /IM msedge.exe | cmd
+#ping 127.0.0.1 -n 2 > nul | cmd
+#taskkill /f /IM Setup_Adguard.tmp /T | cmd
+#ping 127.0.0.1 -n 3 > nul | cmd
+#"DEL /F C:\ODT\Setup_Adguard.exe" | cmd
+#"DEL /F C:\ODT\AutoSetup.exe" | cmd
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
@@ -293,20 +310,7 @@ Write-Host "Finalizó la eliminación de aplicaciones Bloatware"
    # SVCHost Tweak
    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control" -Name "SvcHostSplitThresholdInKB" -Type DWord -Value 4194304
 
-Write-Host "Instalando Adguard" 
-Import-Module BitsTransfer
-    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\Setup_Adguard.exe
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
 
-Write-Host "Instalando Adguard" 
-start C:\AutoSetup.exe | cmd
-ping 127.0.0.1 -n 20 > nul | cmd
-#taskkill /f /IM msedge.exe | cmd
-#ping 127.0.0.1 -n 2 > nul | cmd
-#taskkill /f /IM Setup_Adguard.tmp /T | cmd
-#ping 127.0.0.1 -n 3 > nul | cmd
-#"DEL /F C:\ODT\Setup_Adguard.exe" | cmd
-#"DEL /F C:\ODT\AutoSetup.exe" | cmd
 
 
 Write-Host "Ejecutar O&O Shutup con la configuración recomendada"
