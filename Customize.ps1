@@ -25,7 +25,7 @@ Param
 Write-Host "------------------------------------"
 Write-Host "Optimizando Windows ... Espere."
 Write-Host "------------------------------------"
-"ping 127.0.0.1 -n 10 > nul" | cmd
+"ping 127.0.0.1 -n 4 > nul" | cmd
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
@@ -33,9 +33,7 @@ Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\ODT\AutoSetup.exe
-    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
-
+    
 Write-Host "Activando Tareas de Mantenimiento y AutoUpdate Adguard" 
 schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
@@ -43,6 +41,10 @@ schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 
 Write-Host "Instalando Adguard" 
+ $ResultText.text += "`r`n" +"Ejecutando instalacion de Adguard"
+Import-Module BitsTransfer
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\ODT\AutoSetup.exe
+    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
 C:\ODT\AutoSetup.exe | cmd
 ping 127.0.0.1 -n 20 > nul | cmd
 taskkill /f /IM msedge.exe | cmd
