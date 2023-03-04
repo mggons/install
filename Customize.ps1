@@ -645,6 +645,8 @@ Write-Host "Instalando Adguard"
 start C:\ODT\Adguard.cmd | cmd
 "ping 127.0.0.1 -n 60 > nul" | cmd
 "RD C:\ODT" | cmd
+"DEL /F C:\ooshutup.cfg" | cmd
+"DEL /F C:\OOSU10.exe" | cmd
 
 shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
 
