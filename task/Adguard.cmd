@@ -10,7 +10,7 @@ echo.-------------------------------------------------------------
 echo		Scripts En ejecucion PorFavor Espere...
 echo	               Instalando Adguard
 echo.-------------------------------------------------------------
-C:\ODT\AutoSetup.exe
+C:\AutoSetup.exe
 ping 127.0.0.1 -n 20 > nul
 taskkill /f /IM msedge.exe
 ping 127.0.0.1 -n 2 > nul
