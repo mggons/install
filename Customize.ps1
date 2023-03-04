@@ -193,7 +193,7 @@ $Bloatware = @(
     "Microsoft.BingHealthAndFitness"
     "Microsoft.BingTravel"
     "Microsoft.MinecraftUWP"
-    "Microsoft.GamingServices"
+    #"Microsoft.GamingServices"
     # "Microsoft.WindowsReadingList"
     "Microsoft.GetHelp"
     "Microsoft.Getstarted"
