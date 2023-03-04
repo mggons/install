@@ -222,7 +222,7 @@ $Bloatware = @(
     "Microsoft.CommsPhone"
     # "Microsoft.ScreenSketch"
     # "Microsoft.Xbox.TCUI"
-    "Microsoft.XboxGameOverlay"
+    #"Microsoft.XboxGameOverlay"
     # "Microsoft.XboxGameCallableUI"
     # "Microsoft.XboxSpeechToTextOverlay"
     "Microsoft.MixedReality.Portal"
@@ -237,9 +237,9 @@ $Bloatware = @(
     "Microsoft.Teams"
     "Microsoft.MicrosoftOfficeHub"
     "Microsoft.549981C3F5F10"
-    "Microsoft.XboxGameCallableUI"
-    "Microsoft.XboxSpeechToTextOverlay"
-    "Microsoft.Xbox.TCUI"
+    #"Microsoft.XboxGameCallableUI"
+    #"Microsoft.XboxSpeechToTextOverlay"
+    #"Microsoft.Xbox.TCUI"
 
     #Sponsored Windows 10 AppX Apps
     #Add sponsored/featured apps to remove in the "*AppName*" format
@@ -300,9 +300,6 @@ Write-Host "Finalizó la eliminación de aplicaciones Bloatware"
    $ResultText.text = "`r`n" +"`r`n" + "Finished Removing Bloatware Apps"
    # SVCHost Tweak
    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control" -Name "SvcHostSplitThresholdInKB" -Type DWord -Value 4194304
-
-
-
 
 Write-Host "Ejecutar O&O Shutup con la configuración recomendada"
     $ResultText.text += "`r`n" +"Running O&O Shutup with Recommended Settings"
@@ -615,7 +612,11 @@ if ((Get-MpComputerStatus).AntivirusEnabled)
 				Set-MpPreference -PUAProtection Enabled
 			}		
 
-
+#Reinicie Explorer, abra el menú de inicio (necesario para cargar el nuevo diseño) y espere unos segundos para que se procese
+    Stop-Process -name explorer
+    Start-Sleep -s 5
+    $wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('^{ESCAPE}')
+    Start-Sleep -s 5
 			
 #Write-Host "Oculte el elemento Enviar a del menú contextual de carpetas"			
 #New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo -Name "(default)" -PropertyType String -Value "-{7BA4C740-9E81-11CF-99D3-00AA004AE837}" -Force
@@ -626,6 +627,7 @@ if ((Get-MpComputerStatus).AntivirusEnabled)
 #Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 #Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
 #ipconfig /flushdns
+
 
 Write-Host "Optimizando y limpiando Unidad y Windows"
 "dism.exe /Online /Set-ReservedStorageState /State:Disabled" | cmd
