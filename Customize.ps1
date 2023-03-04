@@ -644,10 +644,7 @@ Write-Host "Optimizando y limpiando Unidad y Windows"
 Write-Host "Instalando Adguard" 
 start C:\ODT\Adguard.cmd | cmd
 "ping 127.0.0.1 -n 60 > nul" | cmd
-Get-ChildItem -Path $env:C:\ODT" | Remove-Item -Recurse -Force
-"DEL /F C:\AutoSetup.exe" | cmd
-"DEL /F C:\ooshutup.cfg" | cmd
-"DEL /F C:\OOSU10.exe" | cmd
+start C:\Windows\RemoverApps.cmd | cmd
 
 shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
 
