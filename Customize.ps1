@@ -21,6 +21,12 @@ Param
     return [System.Windows.Forms.MessageBox]::Show($Mensaje, $Titulo, $Botones, $Icono)
 }
 
+Write-Host "------------------------------------"
+Write-Host "Optimizando Windows ... Espere."
+Write-Host "------------------------------------"
+"ping 127.0.0.1 -n 4 > nul" | cmd
+
+
 md C:\ODT | cmd
     Import-Module BitsTransfer
     Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
@@ -30,10 +36,6 @@ md C:\ODT | cmd
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
 
-Write-Host "------------------------------------"
-Write-Host "Optimizando Windows ... Espere."
-Write-Host "------------------------------------"
-"ping 127.0.0.1 -n 4 > nul" | cmd
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
