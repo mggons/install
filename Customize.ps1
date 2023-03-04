@@ -35,11 +35,11 @@ Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
 
 Write-Host "Activando Tareas de Mantenimiento y AutoUpdate Adguard" 
-"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\Optimize_RAM.xml /tn Optimize_RAM" | cmd
+"schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM" | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\AutoClean_Temp.xml /tn AutoClean_Temp" | cmd
+"schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp" | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\Reset_Adguard.xml /tn Reset_Adguard" | cmd
+"schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard" | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 
 "DEL /F C:\AutoClean_Temp.xml " | cmd
