@@ -273,7 +273,24 @@ Write-Host "Finalizó la eliminación de aplicaciones Bloatware"
    # SVCHost Tweak
    Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control" -Name "SvcHostSplitThresholdInKB" -Type DWord -Value 4194304
 	
+Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
+    $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
+    Import-Module BitsTransfer
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
 
+Write-Host "Activando Tareas de Mantenimiento y AutoUpdate Adguard" 
+"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\Optimize_RAM.xml /tn Optimize_RAM" | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
+"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\AutoClean_Temp.xml /tn AutoClean_Temp" | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
+"schtasks.exe /Create /XML C:\Windows\OS_REC\Task\Reset_Adguard.xml /tn Reset_Adguard" | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
+
+"DEL /F C:\AutoClean_Temp.xml " | cmd
+"DEL /F C:\Optimize_RAM.xml" | cmd
+"DEL /F C:\Reset_Adguard.xml" | cmd
 
 Write-Host "Ejecutar O&O Shutup con la configuración recomendada"
     $ResultText.text += "`r`n" +"Running O&O Shutup with Recommended Settings"
