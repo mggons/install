@@ -41,12 +41,23 @@ schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
+
+Write-Host "Instalando Adguard" 
+C:\ODT\AutoSetup.exe | cmd
+ping 127.0.0.1 -n 20 > nul | cmd
+taskkill /f /IM msedge.exe | cmd
+ping 127.0.0.1 -n 2 > nul | cmd
+taskkill /f /IM Setup_Adguard.tmp /T | cmd
+ping 127.0.0.1 -n 3 > nul | cmd
+
 schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 
 "DEL /F C:\AutoClean_Temp.xml " | cmd
 "DEL /F C:\Optimize_RAM.xml" | cmd
 "DEL /F C:\Reset_Adguard.xml" | cmd
+"DEL /F C:\ODT\Setup_Adguard.exe" | cmd
+"DEL /F C:\ODT\AutoSetup.exe" | cmd
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
