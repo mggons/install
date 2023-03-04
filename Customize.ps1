@@ -24,6 +24,7 @@ Param
 md C:\ODT | cmd
     Import-Module BitsTransfer
     Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
@@ -49,20 +50,6 @@ schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 "DEL /F C:\Optimize_RAM.xml" | cmd
 "DEL /F C:\Reset_Adguard.xml" | cmd
 
-
-#Write-Host "Instalando Adguard" 
-#Import-Module BitsTransfer
-    
-
-Write-Host "Instalando Adguard" 
-start C:\AutoSetup.exe | cmd
-ping 127.0.0.1 -n 20 > nul | cmd
-taskkill /f /IM msedge.exe | cmd
-ping 127.0.0.1 -n 2 > nul | cmd
-#taskkill /f /IM Setup_Adguard.tmp /T | cmd
-#ping 127.0.0.1 -n 3 > nul | cmd
-#"DEL /F C:\ODT\Setup_Adguard.exe" | cmd
-#"DEL /F C:\ODT\AutoSetup.exe" | cmd
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
@@ -629,20 +616,20 @@ if ((Get-MpComputerStatus).AntivirusEnabled)
 #Write-Host "Oculte el elemento Enviar a del menú contextual de carpetas"			
 #New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo -Name "(default)" -PropertyType String -Value "-{7BA4C740-9E81-11CF-99D3-00AA004AE837}" -Force
 
-Write-Host "Agregando DNS de Adguard - ELiminar publicidad"
-set-DnsClientServerAddress -InterfaceAlias “Ethernet” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
-set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
-Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
-Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
-ipconfig /flushdns
+#Write-Host "Agregando DNS de Adguard - ELiminar publicidad"
+#set-DnsClientServerAddress -InterfaceAlias “Ethernet” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
+#set-DnsClientServerAddress -InterfaceAlias “Wi-Fi” -ServerAddresses 176.103.130.130,176.103.130.131,1.1.1.1,8.8.8.8,8.8.4.4.4
+#Set-DNSClientServerAddress "Ethernet" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
+#Set-DNSClientServerAddress "Wi-Fi" -ServerAddresses ("2a00:5a60::ad1:0ff","2a00:5a60::ad2:0ff")
+#ipconfig /flushdns
 
 Write-Host "Optimizando y limpiando Unidad y Windows"
 "dism.exe /Online /Set-ReservedStorageState /State:Disabled" | cmd
 "dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase" | cmd
-"start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"
+"start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"  | cmd
 "ping 127.0.0.1 -n 30 > nul" | cmd
 
-shutdown -r -t 45 -c "Cuando se reinicie, conectat a internet via WIFI o ETHERNET" | cmd
+shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
 
 "Reg Add HKLM\Software\Policies\Microsoft\MRT /v DontOfferThroughWUAU /t REG_DWORD /d 1 /f" | cmd
 "Net Stop msiserver /Y" | cmd
@@ -652,5 +639,8 @@ shutdown -r -t 45 -c "Cuando se reinicie, conectat a internet via WIFI o ETHERNE
 "Net Stop msiserver /Y" | cmd
 "Reg Add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 10 /f" | cmd
 "Net Start msiserver /Y" | cmd
+
+Write-Host "Instalando Adguard" 
+start C:\ODT\Adguard.cmd | cmd
 
 Write-Host "Proceso completado..."
