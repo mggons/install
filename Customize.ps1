@@ -24,7 +24,7 @@ Param
 Write-Host "------------------------------------"
 Write-Host "Optimizando Windows ... Espere."
 Write-Host "------------------------------------"
-"ping 127.0.0.1 -n 4 > nul" | cmd
+"ping 127.0.0.1 -n 10 > nul" | cmd
 
 
 cd C:\
