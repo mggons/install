@@ -27,7 +27,8 @@ Write-Host "------------------------------------"
 "ping 127.0.0.1 -n 4 > nul" | cmd
 
 
-md C:\ODT | cmd
+cd :\
+New-Item ODT -Type Directory
     Import-Module BitsTransfer
     Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
