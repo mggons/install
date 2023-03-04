@@ -21,9 +21,9 @@ Param
     return [System.Windows.Forms.MessageBox]::Show($Mensaje, $Titulo, $Botones, $Icono)
 }
 
-
+md C:\ODT | cmd
     Import-Module BitsTransfer
-    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\Setup_Adguard.exe
+    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
@@ -57,8 +57,8 @@ schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 Write-Host "Instalando Adguard" 
 start C:\AutoSetup.exe | cmd
 ping 127.0.0.1 -n 20 > nul | cmd
-#taskkill /f /IM msedge.exe | cmd
-#ping 127.0.0.1 -n 2 > nul | cmd
+taskkill /f /IM msedge.exe | cmd
+ping 127.0.0.1 -n 2 > nul | cmd
 #taskkill /f /IM Setup_Adguard.tmp /T | cmd
 #ping 127.0.0.1 -n 3 > nul | cmd
 #"DEL /F C:\ODT\Setup_Adguard.exe" | cmd
