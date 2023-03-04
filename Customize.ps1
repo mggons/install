@@ -632,8 +632,6 @@ Write-Host "Optimizando y limpiando Unidad y Windows"
 "start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"  | cmd
 "ping 127.0.0.1 -n 30 > nul" | cmd
 
-shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
-
 "Reg Add HKLM\Software\Policies\Microsoft\MRT /v DontOfferThroughWUAU /t REG_DWORD /d 1 /f" | cmd
 "Net Stop msiserver /Y" | cmd
 "Reg Add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f" | cmd
@@ -647,5 +645,7 @@ Write-Host "Instalando Adguard"
 start C:\ODT\Adguard.cmd | cmd
 "ping 127.0.0.1 -n 60 > nul" | cmd
 "RD C:\ODT" | cmd
+
+shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
 
 Write-Host "Proceso completado..."
