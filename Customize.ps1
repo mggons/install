@@ -32,6 +32,7 @@ New-Item ODT -Type Directory
     Import-Module BitsTransfer
     Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RemoverApps.cmd" -Destination C:\Windows\RemoverApps.cmd
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
