@@ -276,7 +276,7 @@ $Bloatware = @(
     "*Microsoft.Advertising.Xaml*"
     "*Microsoft.MSPaint*"
     #"*Microsoft.MicrosoftStickyNotes*"
-    "*Microsoft.Windows.Photos*"
+    #"*Microsoft.Windows.Photos*"
     #"*Microsoft.WindowsCalculator*"
     #"*Microsoft.WindowsStore*"
 )
