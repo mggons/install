@@ -12,6 +12,9 @@ DEL /F C:\AutoSetup.exe
 DEL /F C:\OOSU10.exe
 DEL /F C:\ooshutup.cfg
 DEL /F C:\Cambios.reg
+DEL /F C:\AutoClean_Temp.xml
+DEL /F C:\Optimize_RAM.xml
+DEL /F C:\Reset_Adguard.xml
 ping 127.0.0.1 -n 3 > nul
 
 exit
