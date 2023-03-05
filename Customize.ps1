@@ -38,6 +38,7 @@ New-Item ODT -Type Directory
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Cambios.reg" -Destination C:\Cambios.reg
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Fondo.jpg" -Destination C:\C:\Windows\Web\Fondo.jpg
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
