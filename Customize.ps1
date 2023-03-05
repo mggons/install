@@ -49,11 +49,8 @@ schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-
-"DEL /F C:\AutoClean_Temp.xml " | cmd
-"DEL /F C:\Optimize_RAM.xml" | cmd
-"DEL /F C:\Reset_Adguard.xml" | cmd
-"DEL /F C:\Cambios.reg" | cmd
+Regedit /s C:\Cambios.reg | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
