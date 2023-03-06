@@ -107,64 +107,64 @@ Write-Host "Deshabilitando la búsqueda de Bing en el menú Inicio..."
 Write-Host "Ocultar cuadro/botón de búsqueda..."
     Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
 
-#Write-Host "Eliminación de mosaicos del menú Inicio"
-#    Set-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -Value '<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  <LayoutOptions StartTileGroupCellWidth="6" />'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  <DefaultLayoutOverride>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    <StartLayoutCollection>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      <defaultlayout:StartLayout GroupCellWidth="6" />'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    </StartLayoutCollection>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  </DefaultLayoutOverride>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    <CustomTaskbarLayoutCollection>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      <defaultlayout:TaskbarLayout>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '        <taskbar:TaskbarPinList>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '          <taskbar:UWA AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '          <taskbar:DesktopApp DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk" />'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '        </taskbar:TaskbarPinList>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      </defaultlayout:TaskbarLayout>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    </CustomTaskbarLayoutCollection>'
-#    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '</LayoutModificationTemplate>'
+Write-Host "Eliminación de mosaicos del menú Inicio"
+    Set-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -Value '<LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  <LayoutOptions StartTileGroupCellWidth="6" />'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  <DefaultLayoutOverride>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    <StartLayoutCollection>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      <defaultlayout:StartLayout GroupCellWidth="6" />'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    </StartLayoutCollection>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '  </DefaultLayoutOverride>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    <CustomTaskbarLayoutCollection>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      <defaultlayout:TaskbarLayout>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '        <taskbar:TaskbarPinList>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '          <taskbar:UWA AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '          <taskbar:DesktopApp DesktopApplicationLinkPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\System Tools\File Explorer.lnk" />'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '        </taskbar:TaskbarPinList>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '      </defaultlayout:TaskbarLayout>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '    </CustomTaskbarLayoutCollection>'
+    Add-Content -Path 'C:\Users\Default\AppData\Local\Microsoft\Windows\Shell\DefaultLayouts.xml' -value '</LayoutModificationTemplate>'
 
- #   $START_MENU_LAYOUT = @"
- #   <LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
- #       <LayoutOptions StartTileGroupCellWidth="6" />
- #       <DefaultLayoutOverride>
- #           <StartLayoutCollection>
- #               <defaultlayout:StartLayout GroupCellWidth="6" />
- #           </StartLayoutCollection>
- #       </DefaultLayoutOverride>
- #   </LayoutModificationTemplate>
-#"@
+   $START_MENU_LAYOUT = @"
+   <LayoutModificationTemplate xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout" Version="1" xmlns:taskbar="http://schemas.microsoft.com/Start/2014/TaskbarLayout" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
+       <LayoutOptions StartTileGroupCellWidth="6" />
+       <DefaultLayoutOverride>
+           <StartLayoutCollection>
+               <defaultlayout:StartLayout GroupCellWidth="6" />
+           </StartLayoutCollection>
+       </DefaultLayoutOverride>
+   </LayoutModificationTemplate>
+"@
 
-#    $layoutFile="C:\Windows\StartMenuLayout.xml"
+    $layoutFile="C:\Windows\StartMenuLayout.xml"
 
-    #Eliminar archivo de diseño si ya existe
- #   If(Test-Path $layoutFile)
- #   {
- #       Remove-Item $layoutFile
- #  }
+#Eliminar archivo de diseño si ya existe
+   If(Test-Path $layoutFile)
+   {
+       Remove-Item $layoutFile
+  }
 
     #Crea el archivo de diseño en blanco
- #   $START_MENU_LAYOUT | Out-File $layoutFile -Encoding ASCII
+   $START_MENU_LAYOUT | Out-File $layoutFile -Encoding ASCII
 
-#    $regAliases = @("HKLM", "HKCU")
+    $regAliases = @("HKLM", "HKCU")
 
-    #Asigne el diseño de inicio y fuerce su aplicación con "LockedStartLayout" tanto a nivel de máquina como de usuario
- #   foreach ($regAlias in $regAliases){
- #       $basePath = $regAlias + ":\SOFTWARE\Policies\Microsoft\Windows"
- #       $keyPath = $basePath + "\Explorer"
- #       IF(!(Test-Path -Path $keyPath)) {
- #           New-Item -Path $basePath -Name "Explorer"
- #       }
- #       Set-ItemProperty -Path $keyPath -Name "LockedStartLayout" -Value 1
- #       Set-ItemProperty -Path $keyPath -Name "StartLayoutFile" -Value $layoutFile
- #   }
+#Asigne el diseño de inicio y fuerce su aplicación con "LockedStartLayout" tanto a nivel de máquina como de usuario
+   foreach ($regAlias in $regAliases){
+       $basePath = $regAlias + ":\SOFTWARE\Policies\Microsoft\Windows"
+       $keyPath = $basePath + "\Explorer"
+       IF(!(Test-Path -Path $keyPath)) {
+           New-Item -Path $basePath -Name "Explorer"
+       }
+       Set-ItemProperty -Path $keyPath -Name "LockedStartLayout" -Value 1
+       Set-ItemProperty -Path $keyPath -Name "StartLayoutFile" -Value $layoutFile
+   }
 
 #Reinicie Explorer, abra el menú de inicio (necesario para cargar el nuevo diseño) y espere unos segundos para que se procese
     Stop-Process -name explorer
     Start-Sleep -s 5
-    $wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('^{ESCAPE}')
-    Start-Sleep -s 5
+#    $wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('^{ESCAPE}')
+#    Start-Sleep -s 5
 
 #Habilite la capacidad de anclar elementos nuevamente al deshabilitar "LockedStartLayout"
     foreach ($regAlias in $regAliases){
@@ -611,10 +611,10 @@ if ((Get-MpComputerStatus).AntivirusEnabled)
 			}		
 
 #Reinicie Explorer, abra el menú de inicio (necesario para cargar el nuevo diseño) y espere unos segundos para que se procese
-    Stop-Process -name explorer
-    Start-Sleep -s 5
-    $wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('^{ESCAPE}')
-    Start-Sleep -s 5
+#    Stop-Process -name explorer
+#    Start-Sleep -s 5
+#    $wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('^{ESCAPE}')
+#    Start-Sleep -s 5
 			
 #Write-Host "Oculte el elemento Enviar a del menú contextual de carpetas"			
 #New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers\SendTo -Name "(default)" -PropertyType String -Value "-{7BA4C740-9E81-11CF-99D3-00AA004AE837}" -Force
