@@ -435,6 +435,7 @@ Write-Host "Desactivando Hibernación..."
         New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" | Out-Null
     }
     Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" -Name "ShowHibernateOption" -Type Dword -Value 0
+    powercfg.exe /h off | cmd
 
 #Write-Host "Mostrando detalles del administrador de tareas..."
 #    $taskmgr = Start-Process -WindowStyle Hidden -FilePath taskmgr.exe -PassThru
