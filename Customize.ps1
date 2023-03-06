@@ -647,6 +647,6 @@ Write-Host "Optimizando y limpiando Unidad y Windows"
 "start cmd.exe /c Cleanmgr /sageset:65535 & Cleanmgr /sagerun:65535"  | cmd
 "ping 127.0.0.1 -n 30 > nul" | cmd
 
-shutdown -r -t 90 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
+shutdown -r -t 25 -c "El Computador se podra usar con normalidad despues del reinicio..." | cmd
 
 Write-Host "Proceso completado..."
