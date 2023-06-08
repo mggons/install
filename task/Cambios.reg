@@ -5,6 +5,13 @@
 "JPEGImportQuality"=dword:00000100
 "WallPaper"="C:\\Windows\\web\\Fondo.jpg"
 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
+"Type"="NTP"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tzautoupdate](time zone)
+"Start"=dword:00000003 (on)
+
+
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "DisableAcrylicBackgroundOnLogon"=dword:00000001
 
