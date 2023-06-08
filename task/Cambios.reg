@@ -9,8 +9,7 @@
 "Type"="NTP"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tzautoupdate](time zone)
-"Start"=dword:00000003 (on)
-
+"Start"=dword:00000003
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 "DisableAcrylicBackgroundOnLogon"=dword:00000001
