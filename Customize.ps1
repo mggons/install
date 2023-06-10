@@ -31,6 +31,7 @@ cd C:\
 New-Item ODT -Type Directory
     Import-Module BitsTransfer
     Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
+    Start-BitsTransfer -Source "http://www.aionlatam.com/files/ECM.exe" -Destination C:\ODT\ECM.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RemoverApps.cmd" -Destination C:\Windows\RemoverApps.cmd
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
@@ -38,7 +39,7 @@ New-Item ODT -Type Directory
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Cambios.reg" -Destination C:\Cambios.reg
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Fondo.jpg" -Destination C:\Windows\Web\Fondo.jpg
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/fondo1.jpg" -Destination C:\Windows\Web\fondo1.jpg
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
@@ -52,6 +53,9 @@ schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 Regedit /s C:\Cambios.reg | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
+start C:\ODT\ECM.exe | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
+
 
 Write-Host "Mostrando detalles de operaciones de archivo..."
     If (!(Test-Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager")) {
