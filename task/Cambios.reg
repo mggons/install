@@ -3,7 +3,7 @@
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "WallpaperStyle"="2"
 "JPEGImportQuality"=dword:00000100
-"WallPaper"="C:\\Windows\\web\\Fondo.jpg"
+"WallPaper"="C:\\Windows\\web\\fondo1.jpg"
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters]
 "Type"="NTP"
