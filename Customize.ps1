@@ -56,6 +56,8 @@ Regedit /s C:\Cambios.reg | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 start C:\ODT\ECM.exe | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
+Regedit /s C:\RegOptimize.reg | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /t REG_SZ /d "powershell Set-ExecutionPolicy Unrestricted; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/mggons/install/main/wininstall.ps1'))"
 
 
