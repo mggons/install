@@ -29,17 +29,17 @@ Write-Host "------------------------------------"
 cd C:\
 New-Item ODT -Type Directory
     Import-Module BitsTransfer
-    Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
-    Start-BitsTransfer -Source "http://www.aionlatam.com/files/ECM.exe" -Destination C:\ODT\ECM.exe
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RemoverApps.cmd" -Destination C:\Windows\RemoverApps.cmd
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
+    #Start-BitsTransfer -Source "http://www.aionlatam.com/files/Setup_Adguard.exe" -Destination C:\ODT\Setup_Adguard.exe
+    #Start-BitsTransfer -Source "http://www.aionlatam.com/files/ECM.exe" -Destination C:\ODT\ECM.exe
+    #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Adguard.cmd" -Destination C:\ODT\Adguard.cmd
+    #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RemoverApps.cmd" -Destination C:\Windows\RemoverApps.cmd
+    #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
+    #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Cambios.reg" -Destination C:\Cambios.reg
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RegOptimize.reg" -Destination C:\RegOptimize.reg
-    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/fondo1.jpg" -Destination C:\Windows\Web\fondo1.jpg
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/fondo2.jpg" -Destination C:\Windows\Web\fondo1.jpg
 
 Write-Host "Descargando Tareas de Mantenimiento y AutoUpdate Adguard"
     $ResultText.text += "`r`n" +"Ejecutando Tareas de Mantenimiento y AutoUpdate Adguard"
