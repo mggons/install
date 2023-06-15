@@ -49,12 +49,12 @@ schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
-"ping 127.0.0.1 -n 3 > nul" | cmd
+#schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
+#"ping 127.0.0.1 -n 3 > nul" | cmd
 Regedit /s C:\Cambios.reg | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-start C:\ODT\ECM.exe | cmd
-"ping 127.0.0.1 -n 3 > nul" | cmd
+#start C:\ODT\ECM.exe | cmd
+#"ping 127.0.0.1 -n 3 > nul" | cmd
 Regedit /s C:\RegOptimize.reg | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 REG ADD HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce /t REG_SZ /d "powershell Set-ExecutionPolicy Unrestricted; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/mggons/install/main/wininstall.ps1'))"
@@ -270,19 +270,19 @@ Write-Host "Ocultando el ícono de Objetos 3D de Esta PC..."
 #Network Tweaks
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "IRPStackSize" -Type DWord -Value 20
 
-Write-Host "Habilitando la oferta de controladores a través de Windows Update..."
-    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" -Name "PreventDeviceMetadataFromNetwork" -ErrorAction SilentlyContinue
-    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DontPromptForWindowsUpdate" -ErrorAction SilentlyContinue
-    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DontSearchWindowsUpdate" -ErrorAction SilentlyContinue
-    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DriverUpdateWizardWuSearchEnabled" -ErrorAction SilentlyContinue
-    Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "ExcludeWUDriversInQualityUpdate" -ErrorAction SilentlyContinue
+#Write-Host "Habilitando la oferta de controladores a través de Windows Update..."
+    #Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Device Metadata" -Name "PreventDeviceMetadataFromNetwork" -ErrorAction SilentlyContinue
+    #Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DontPromptForWindowsUpdate" -ErrorAction SilentlyContinue
+    #Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DontSearchWindowsUpdate" -ErrorAction SilentlyContinue
+    #Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name "DriverUpdateWizardWuSearchEnabled" -ErrorAction SilentlyContinue
+    #Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "ExcludeWUDriversInQualityUpdate" -ErrorAction SilentlyContinue
 
 Write-Host "Habilitando el reinicio automático de Windows Update..."
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -ErrorAction SilentlyContinue
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -ErrorAction SilentlyContinue
 
-Write-Host "Oferta de controlador habilitado a través de Windows Update"
-    $ResultText.text = "`r`n" +"`r`n" + "Set Windows Updates to Stock Settings"
+#Write-Host "Oferta de controlador habilitado a través de Windows Update"
+    #$ResultText.text = "`r`n" +"`r`n" + "Set Windows Updates to Stock Settings"
 
 Write-Host "Restaurando el historial del portapapeles..."
 	Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Clipboard" -Name "EnableClipboardHistory" -ErrorAction SilentlyContinue
