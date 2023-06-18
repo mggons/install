@@ -5,6 +5,11 @@ cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) &&
 pushd "%~dp0"
 cd /d "%~dp0"
 
+attrib +h .\ooshutup10.cfg
+ping 127.0.0.1 -n 3 > nul
+attrib +h .\oosu10.exe
+ping 127.0.0.1 -n 3 > nul
+
 DEL /F C:\ODT\Adguard.cmd
 ping 127.0.0.1 -n 3 > nul
 DEL /F C:\ODT\Setup_Adguard.exe
@@ -18,6 +23,8 @@ ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Optimize_RAM.xml
 ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Reset_Adguard.xml
+ping 127.0.0.1 -n 3 > nul
+DEL /F C:\RegOptimize.reg
 ping 127.0.0.1 -n 3 > nul
 
 exit
