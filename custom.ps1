@@ -97,12 +97,6 @@ Write-Host "Deshabilitando la búsqueda de Bing en el menú Inicio..."
 		New-Item -Path "Registry::HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData\Microsoft.549981C3F5F10_8wekyb3d8bbwe\CortanaStartupId" -Force
 		}
 	New-ItemProperty -Path "Registry::HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData\Microsoft.549981C3F5F10_8wekyb3d8bbwe\CortanaStartupId" -Name State -PropertyType DWord -Value 1 -Force
-	
-#Habilite la capacidad de anclar elementos nuevamente al deshabilitar "LockedStartLayout"
-    foreach ($regAlias in $regAliases){
-        $basePath = $regAlias + ":\SOFTWARE\Policies\Microsoft\Windows"
-        $keyPath = $basePath + "\Explorer"
-        Set-ItemProperty -Path $keyPath -Name "LockedStartLayout" -Value 0
 
 Write-Host "Ajustes de búsqueda y menú de inicio completos"
     $ResultText.text = "`r`n" +"`r`n" + "Search and Start Menu Tweaks Complete"
@@ -375,7 +369,7 @@ ipconfig /flushdns
 #Write-Host "Instalando Adguard" 
 #start C:\ODT\Adguard.cmd | cmd
 #"ping 127.0.0.1 -n 60 > nul" | cmd
-#start C:\Windows\RemoverApps.cmd | cmd
+start C:\Windows\RemoverApps.cmd | cmd
 
 Write-Host "Optimizando y limpiando Unidad y Windows"
 "dism.exe /Online /Set-ReservedStorageState /State:Disabled" | cmd
