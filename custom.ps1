@@ -100,9 +100,7 @@ Write-Host "Deshabilitando la búsqueda de Bing en el menú Inicio..."
 
 Write-Host "Ajustes de búsqueda y menú de inicio completos"
     $ResultText.text = "`r`n" +"`r`n" + "Search and Start Menu Tweaks Complete"
-    
 }
-
 
 Write-Host "Eliminación de bloatware Adicional"
 winget uninstall Microsoft.teams
@@ -274,9 +272,6 @@ Write-Host "Ocultando el ícono de Objetos 3D de Esta PC..."
 Write-Host "Habilitando el reinicio automático de Windows Update..."
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -ErrorAction SilentlyContinue
     Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -ErrorAction SilentlyContinue
-
-#Write-Host "Oferta de controlador habilitado a través de Windows Update"
-    #$ResultText.text = "`r`n" +"`r`n" + "Set Windows Updates to Stock Settings"
 
 Write-Host "Restaurando el historial del portapapeles..."
 	Remove-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Clipboard" -Name "EnableClipboardHistory" -ErrorAction SilentlyContinue
