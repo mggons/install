@@ -36,6 +36,7 @@ New-Item ODT -Type Directory
     #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoSetup.exe" -Destination C:\AutoSetup.exe
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/AutoClean_Temp.xml" -Destination C:\AutoClean_Temp.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Optimize_RAM.xml" -Destination C:\Optimize_RAM.xml
+    Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/ActiveOOSU.xml" -Destination C:\ActiveOOSU.xml
     #Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Reset_Adguard.xml" -Destination C:\Reset_Adguard.xml
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/Cambios.reg" -Destination C:\Cambios.reg
     Start-BitsTransfer -Source "https://raw.githubusercontent.com/mggons/install/main/task/RegOptimize.reg" -Destination C:\RegOptimize.reg
@@ -49,8 +50,8 @@ schtasks.exe /Create /XML C:\Optimize_RAM.xml /tn Optimize_RAM | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 schtasks.exe /Create /XML C:\AutoClean_Temp.xml /tn AutoClean_Temp | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
-#schtasks.exe /Create /XML C:\Reset_Adguard.xml /tn Reset_Adguard | cmd
-#"ping 127.0.0.1 -n 3 > nul" | cmd
+schtasks.exe /Create /XML C:\ActiveOOSU.xml /tn ActiveOOSU | cmd
+"ping 127.0.0.1 -n 3 > nul" | cmd
 Regedit /s C:\Cambios.reg | cmd
 "ping 127.0.0.1 -n 3 > nul" | cmd
 #start C:\ODT\ECM.exe | cmd
