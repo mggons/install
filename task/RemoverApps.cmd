@@ -22,6 +22,8 @@ DEL /F C:\AutoClean_Temp.xml
 ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Optimize_RAM.xml
 ping 127.0.0.1 -n 3 > nul
+DEL /F C:\ActiveOOSU.xml
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Reset_Adguard.xml
 ping 127.0.0.1 -n 3 > nul
 DEL /F C:\RegOptimize.reg
