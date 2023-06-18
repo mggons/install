@@ -99,10 +99,6 @@ Write-Host "Deshabilitando la búsqueda de Bing en el menú Inicio..."
 		}
 	New-ItemProperty -Path "Registry::HKEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData\Microsoft.549981C3F5F10_8wekyb3d8bbwe\CortanaStartupId" -Name State -PropertyType DWord -Value 1 -Force
 
-Write-Host "Ajustes de búsqueda y menú de inicio completos"
-    $ResultText.text = "`r`n" +"`r`n" + "Search and Start Menu Tweaks Complete"
-}
-
 Write-Host "Eliminación de bloatware Adicional"
 winget uninstall Microsoft.teams
 
