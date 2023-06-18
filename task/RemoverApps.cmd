@@ -6,14 +6,17 @@ pushd "%~dp0"
 cd /d "%~dp0"
 
 DEL /F C:\ODT\Adguard.cmd
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\ODT\Setup_Adguard.exe
-RD /Q C:\ODT
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\AutoSetup.exe
-DEL /F C:\OOSU10.exe
-DEL /F C:\ooshutup.cfg
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Cambios.reg
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\AutoClean_Temp.xml
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Optimize_RAM.xml
+ping 127.0.0.1 -n 3 > nul
 DEL /F C:\Reset_Adguard.xml
 ping 127.0.0.1 -n 3 > nul
 
