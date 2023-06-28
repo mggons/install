@@ -15,21 +15,23 @@ Install-PackageProvider -Name Nuget -Force
 Install-Module PSWindowsUpdate -Force
 Hide-WindowsUpdate -KBArticleID KB5005463 -Confirm:$False
 
-# get latest download url
-$URL = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
-$URL = (Invoke-WebRequest -Uri $URL).Content | ConvertFrom-Json |
-        Select-Object -ExpandProperty "assets" |
-        Where-Object "browser_download_url" -Match '.msixbundle' |
-        Select-Object -ExpandProperty "browser_download_url"
+# GUI Specs
+Write-Host "Checking winget..."
 
-# download
-Invoke-WebRequest -Uri $URL -OutFile "Setup.msix" -UseBasicParsing
-
-# install
-Add-AppxPackage -Path "Setup.msix"
-
-# delete file
-Remove-Item "Setup.msix"
+# Check if winget is installed
+if (Test-Path ~\AppData\Local\Microsoft\WindowsApps\winget.exe){
+    'Winget Already Installed'
+}  
+else{
+    # Installing winget from the Microsoft Store
+	Write-Host "Winget not found, installing it now."
+    $ResultText.text = "`r`n" +"`r`n" + "Installing Winget... Please Wait"
+	Start-Process "ms-appinstaller:?source=https://aka.ms/getwinget"
+	$nid = (Get-Process AppInstaller).Id
+	Wait-Process -Id $nid
+	Write-Host Winget Installed
+    $ResultText.text = "`r`n" +"`r`n" + "Winget Installed - Ready for Next Task"
+}
 
 # $inputXML = Get-Content "MainWindow.xaml" #uncomment for development
 $inputXML = (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/mggons/install/main/MainWindow.xaml") #uncomment for Production
