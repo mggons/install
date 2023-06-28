@@ -10,6 +10,11 @@ If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 	Exit
 }
 
+Write-Host "Ocultando Actualizacion KB5005463"
+Install-PackageProvider -Name Nuget -Force
+Install-Module PSWindowsUpdate -Force
+Hide-WindowsUpdate -KBArticleID KB5005463 -Confirm:$False
+
 # $inputXML = Get-Content "MainWindow.xaml" #uncomment for development
 $inputXML = (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/mggons/install/main/MainWindow.xaml") #uncomment for Production
 
