@@ -124,6 +124,7 @@ $WPFinstall.Add_Click({
         $WPFInstallpdf24.IsChecked = $false
     }
     If ( $WPFInstallnitro.IsChecked -eq $true ) { 
+    	Import-Module BitsTransfer
         Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro_pro14_x64.msi" -Destination C:\ODT\Nitro.msi
     	Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Parche.exe
      	Start-Process C:\ODT\Nitro.msi /passive /qr /norestart
