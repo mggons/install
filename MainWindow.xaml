@@ -91,6 +91,7 @@
 							<Label Content="PDF" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installadobe" Content="Adobe Reader DC" Margin="5,0"/>
 							<CheckBox Name="Installpdf24" Content="PDF24 Creator" Margin="5,0"/>
+							<CheckBox Name="Installnitro" Content="Nitro PDF Pro" Margin="5,0"/>
 							
 							<Label Content="Programacion" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="Installatom" Content="Atom" Margin="5,0"/>
