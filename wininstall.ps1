@@ -104,7 +104,7 @@ $WPFinstall.Add_Click({
      	Import-Module BitsTransfer
     	Start-BitsTransfer -Source "http://www.aionlatam.com/files/OfficeInstall.bat" -Destination C:\ODT\OfficeInstall.bat
         Start-Process C:\ODT\OfficeInstall.bat
-        $WPFInstallMicrosoftOffice.IsChecked = $false
+        $WPFInstallMicrosoftOffice2.IsChecked = $false
     } 
     If ( $WPFInstallpowertoys.IsChecked -eq $true ) { 
         $wingetinstall.Add("Microsoft.PowerToys")
@@ -130,7 +130,7 @@ $WPFinstall.Add_Click({
     	Import-Module BitsTransfer
 	Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro.exe" -Destination C:\ODT\nitro.exe
  	Start-Process C:\ODT\nitro.exe /s
-        $WPFInstallpdf24.IsChecked = $false
+        $WPFInstallnitro.IsChecked = $false
     }
     If ( $WPFInstallavast.IsChecked -eq $true ) { 
         $wingetinstall.Add("XPDNZJFNCR1B07")
