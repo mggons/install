@@ -15,6 +15,10 @@ Install-PackageProvider -Name Nuget -Force
 Install-Module PSWindowsUpdate -Force
 Hide-WindowsUpdate -KBArticleID KB5005463 -Confirm:$False
 
+Import-Module BitsTransfer
+Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Parche.exe
+Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro.msi" -Destination C:\ODT\Nitro.msi
+
 # GUI Specs
 Write-Host "Checking winget..."
 
@@ -124,10 +128,7 @@ $WPFinstall.Add_Click({
         $WPFInstallpdf24.IsChecked = $false
     }
     If ( $WPFInstallnitro.IsChecked -eq $true ) { 
-    	Import-Module BitsTransfer
-    	Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Parche.exe
-     	Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro.msi" -Destination C:\ODT\Nitro.msi
-     	Start-Process C:\ODT\Nitro.msi /passive /qr /norestart
+    	Start-Process C:\ODT\Nitro.msi /passive /qr /norestart
       	"ping 127.0.0.1 -n 90 > nul" | cmd
       	Start-Process C:\ODT\Parche.exe /S
         $WPFInstallpdf24.IsChecked = $false
