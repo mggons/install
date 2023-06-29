@@ -100,7 +100,9 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("Microsoft.Office")
         $WPFInstallMicrosoftOffice.IsChecked = $false
     } 
-    If ( $WPFInstallMicrosoftOffice2.IsChecked -eq $true ) { 
+    If ( $WPFInstallMicrosoftOffice2.IsChecked -eq $true ) {
+     	Import-Module BitsTransfer
+    	Start-BitsTransfer -Source "http://www.aionlatam.com/files/OfficeInstall.bat" -Destination C:\ODT\OfficeInstall.bat
         Start-Process C:\ODT\OfficeInstall.bat
         $WPFInstallMicrosoftOffice.IsChecked = $false
     } 
