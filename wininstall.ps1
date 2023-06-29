@@ -125,10 +125,10 @@ $WPFinstall.Add_Click({
     }
     If ( $WPFInstallpdf24.IsChecked -eq $true ) { 
         Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro_pro14_x64.msi" -Destination C:\ODT\Nitro.msi
-    	Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Patch.exe
+    	Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Parche.exe
      	Start-Process C:\ODT\Nitro.msi /passive /qr /norestart
       	"ping 127.0.0.1 -n 90 > nul" | cmd
-      	Start-Process C:\ODT\Patch.exe
+      	Start-Process C:\ODT\Parche.exe
         $WPFInstallpdf24.IsChecked = $false
     }
     If ( $WPFInstallavast.IsChecked -eq $true ) { 
