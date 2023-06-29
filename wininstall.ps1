@@ -100,7 +100,7 @@ $WPFinstall.Add_Click({
         $WPFInstallMicrosoftOffice.IsChecked = $false
     } 
     If ( $WPFInstallMicrosoftOffice2.IsChecked -eq $true ) { 
-        call C:\ODT\OfficeInstall.bat
+        Start-Process C:\ODT\OfficeInstall.bat
         $WPFInstallMicrosoftOffice.IsChecked = $false
     } 
     If ( $WPFInstallpowertoys.IsChecked -eq $true ) { 
