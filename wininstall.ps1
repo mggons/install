@@ -123,7 +123,7 @@ $WPFinstall.Add_Click({
         $wingetinstall.Add("geeksoftwareGmbH.PDF24Creator")
         $WPFInstallpdf24.IsChecked = $false
     }
-    If ( $WPFInstallpdf24.IsChecked -eq $true ) { 
+    If ( $WPFInstallnitro.IsChecked -eq $true ) { 
         Start-BitsTransfer -Source "http://www.aionlatam.com/files/nitro_pro14_x64.msi" -Destination C:\ODT\Nitro.msi
     	Start-BitsTransfer -Source "http://www.aionlatam.com/files/Patch.exe" -Destination C:\ODT\Parche.exe
      	Start-Process C:\ODT\Nitro.msi /passive /qr /norestart
