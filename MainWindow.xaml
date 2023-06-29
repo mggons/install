@@ -57,6 +57,7 @@
 
 							<Label Content="Office Suites" FontSize="16" Margin="5,0"/>
 							<CheckBox Name="InstallMicrosoftOffice" Content="Microsoft Office 365 Enterprise" Margin="5,0"/>
+							<CheckBox Name="InstallMicrosoftOffice2" Content="Microsoft 365 Local" Margin="5,0"/>
 							<CheckBox Name="Installlibreoffice" Content="Libre Office" Margin="5,0"/>
 							<CheckBox Name="Installwpsoffice" Content="WPS Office" Margin="5,0"/>							
 
