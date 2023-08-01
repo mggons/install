@@ -30,6 +30,7 @@ Catch{
 	Write-Host "winget is not found, installing it right now."
 $progressPreference = 'silentlyContinue'
 Add-AppxPackage -Path https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx
+cd C:\ODT
 Invoke-WebRequest -Uri https://www.nuget.org/api/v2/package/Microsoft.UI.Xaml/2.7.3 -OutFile .\microsoft.ui.xaml.2.7.3.zip
 Expand-Archive .\microsoft.ui.xaml.2.7.3.zip
 Add-AppxPackage .\microsoft.ui.xaml.2.7.3\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx
