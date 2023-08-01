@@ -28,20 +28,10 @@ Try{
 Catch{
 	# winget is not installed. Install it from the Github release
 	Write-Host "winget is not found, installing it right now."
-$progressPreference = 'silentlyContinue'
-Add-AppxPackage -Path https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx
 cd C:\ODT
-Invoke-WebRequest -Uri https://www.nuget.org/api/v2/package/Microsoft.UI.Xaml/2.7.3 -OutFile .\microsoft.ui.xaml.2.7.3.zip
-Expand-Archive .\microsoft.ui.xaml.2.7.3.zip
-Add-AppxPackage .\microsoft.ui.xaml.2.7.3\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx
-$latestWingetMsixBundleUri = $(Invoke-RestMethod https://api.github.com/repos/microsoft/winget-cli/releases/latest).assets.browser_download_url | Where-Object {$_.EndsWith(".msixbundle")}
-$latestWingetMsixBundle = $latestWingetMsixBundleUri.Split("/")[-1]
-Write-Information "Downloading winget to artifacts directory..."
-Invoke-WebRequest -Uri $latestWingetMsixBundleUri -OutFile "./$latestWingetMsixBundle"
-Invoke-WebRequest -Uri https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
-Write-Host "Installing the winget package"
-Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
-Add-AppxPackage $latestWingetMsixBundle
+Add-AppxPackage -Path Microsoft.VCLibs.x64.14.00.Desktop.appx
+Add-AppxPackage -Path Microsoft.UI.Xaml.2.7.appx
+Add-AppxPackage -Path Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appx
 
     Write-Host "Cleanup winget install package"
     if (Test-Path -Path $output) {
